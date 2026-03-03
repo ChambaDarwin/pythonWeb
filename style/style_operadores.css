@@ -1,0 +1,533 @@
+
+        :root {
+            --aritmetico-color: #3498db;
+            --comparacion-color: #2ecc71;
+            --logico-color: #e74c3c;
+            --asignacion-color: #9b59b6;
+            --dark-bg: #2c3e50;
+            --medium-bg: #34495e;
+            --text-light: #ecf0f1;
+            --text-muted: #bdc3c7;
+            --code-bg: #1e272e;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg), var(--medium-bg));
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--card-bg);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                var(--aritmetico-color), 
+                var(--comparacion-color), 
+                var(--logico-color), 
+                var(--asignacion-color));
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, 
+                var(--aritmetico-color), 
+                var(--comparacion-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .python-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* MINI TARJETAS */
+        .tipos-mini {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .tipo-mini {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mini-arit { 
+            background: rgba(52, 152, 219, 0.2); 
+            color: var(--aritmetico-color); 
+            border: 2px solid var(--aritmetico-color); 
+        }
+        .mini-comp { 
+            background: rgba(46, 204, 113, 0.2); 
+            color: var(--comparacion-color); 
+            border: 2px solid var(--comparacion-color); 
+        }
+        .mini-log { 
+            background: rgba(231, 76, 60, 0.2); 
+            color: var(--logico-color); 
+            border: 2px solid var(--logico-color); 
+        }
+        .mini-asig { 
+            background: rgba(155, 89, 182, 0.2); 
+            color: var(--asignacion-color); 
+            border: 2px solid var(--asignacion-color); 
+        }
+
+        /* GRID PRINCIPAL */
+        .operadores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .operador-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .operador-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .operador-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+
+        .card-arit { border-color: var(--aritmetico-color); }
+        .card-arit::before { background: var(--aritmetico-color); }
+
+        .card-comp { border-color: var(--comparacion-color); }
+        .card-comp::before { background: var(--comparacion-color); }
+
+        .card-log { border-color: var(--logico-color); }
+        .card-log::before { background: var(--logico-color); }
+
+        .card-asig { border-color: var(--asignacion-color); }
+        .card-asig::before { background: var(--asignacion-color); }
+
+        .operador-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .operador-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .card-arit .operador-icon { 
+            background: rgba(52, 152, 219, 0.2); 
+            color: var(--aritmetico-color); 
+            border: 2px solid var(--aritmetico-color); 
+        }
+        .card-comp .operador-icon { 
+            background: rgba(46, 204, 113, 0.2); 
+            color: var(--comparacion-color); 
+            border: 2px solid var(--comparacion-color); 
+        }
+        .card-log .operador-icon { 
+            background: rgba(231, 76, 60, 0.2); 
+            color: var(--logico-color); 
+            border: 2px solid var(--logico-color); 
+        }
+        .card-asig .operador-icon { 
+            background: rgba(155, 89, 182, 0.2); 
+            color: var(--asignacion-color); 
+            border: 2px solid var(--asignacion-color); 
+        }
+
+        .operador-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .operador-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* TABLAS DE OPERADORES */
+        .tabla-operadores {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tabla-operadores th {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .tabla-operadores td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tabla-operadores tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-operadores tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .simbolo {
+            font-family: 'Consolas', monospace;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .descripcion {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* EJEMPLOS */
+        .ejemplos-section {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: var(--aritmetico-color);
+            margin-bottom: 30px;
+            font-size: 2rem;
+            border-left: 5px solid var(--aritmetico-color);
+            padding-left: 20px;
+        }
+
+        h3 {
+            color: var(--comparacion-color);
+            margin: 25px 0 15px 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* CÓDIGO */
+        .code-container {
+            background: var(--code-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .code-header {
+            background: #2d3436;
+            padding: 12px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid currentColor;
+            color: inherit;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .code-block {
+            padding: 25px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 1rem;
+        }
+
+        code {
+            line-height: 1.8;
+        }
+
+        .keyword { color: #ff79c6; }
+        .function { color: #50fa7b; }
+        .string { color: #f1fa8c; }
+        .comment { color: #636e72; }
+        .number { color: #bd93f9; }
+        .variable { color: #8be9fd; }
+        .bool { color: #ffb86c; }
+        .operator { color: #ff79c6; }
+
+        /* CALCULADORA */
+        .calculadora {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .calculadora h3 {
+            color: var(--logico-color);
+            margin-bottom: 25px;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+
+        .calc-btn {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--logico-color);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .calc-btn:hover {
+            background: var(--logico-color);
+            transform: scale(1.05);
+        }
+
+        .calc-display {
+            background: var(--code-bg);
+            border: 2px solid var(--logico-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: 'Consolas', monospace;
+            font-size: 1.5rem;
+            min-height: 80px;
+            text-align: right;
+            word-break: break-all;
+        }
+
+        .calc-result {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(46, 204, 113, 0.2);
+            border-radius: 10px;
+            border-left: 5px solid var(--comparacion-color);
+            font-family: 'Consolas', monospace;
+            font-size: 1.2rem;
+        }
+
+        /* EJERCICIOS */
+        .ejercicios {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .ejercicio {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid var(--asignacion-color);
+        }
+
+        .ejercicio h4 {
+            color: var(--asignacion-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ejercicio-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--asignacion-color);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            margin: 10px 0;
+            font-family: 'Consolas', monospace;
+        }
+
+        .verificar-btn {
+            background: rgba(155, 89, 182, 0.2);
+            border: 2px solid var(--asignacion-color);
+            color: var(--asignacion-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .verificar-btn:hover {
+            background: var(--asignacion-color);
+            color: white;
+        }
+
+        .resultado {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border-left: 4px solid var(--comparacion-color);
+            font-family: 'Consolas', monospace;
+        }
+
+        /* RESUMEN */
+        .resumen {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .resumen-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .resumen-item {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .resumen-item h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .operadores-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .calc-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 5px;
+            }
+            
+            .calc-btn {
+                padding: 15px;
+                font-size: 1.2rem;
+            }
+        }

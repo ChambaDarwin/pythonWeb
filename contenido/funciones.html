@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en Python - Las 3 más utilizadas</title>
+    <link rel="stylesheet" href="../style/style_funciones.css">
+    <link rel="icon" type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="python-icon">⚡</div>
+            <h1>Funciones en Python - Las 3 más utilizadas</h1>
+            <p class="subtitle">Aprende las funciones básicas, con parámetros y con retorno. ¡Todo lo que necesitas para empezar!</p>
+        </header>
+
+        <!-- TARJETAS DE LAS 3 FUNCIONES -->
+        <div class="funciones-grid">
+            <div class="funcion-card funcion-1">
+                <div class="funcion-header">
+                    <div class="funcion-icon">1</div>
+                    <div>
+                        <div class="funcion-title">Función Simple</div>
+                        <div class="funcion-desc">Solo ejecuta código</div>
+                    </div>
+                </div>
+                <div class="funcion-content">
+                    <p>La función más básica. Solo ejecuta un bloque de código cuando la llamas.</p>
+                    <p><strong>Como:</strong> Un botón que siempre hace lo mismo.</p>
+                </div>
+            </div>
+
+            <div class="funcion-card funcion-2">
+                <div class="funcion-header">
+                    <div class="funcion-icon">2</div>
+                    <div>
+                        <div class="funcion-title">Función con Parámetros</div>
+                        <div class="funcion-desc">Recibe datos para trabajar</div>
+                    </div>
+                </div>
+                <div class="funcion-content">
+                    <p>Recibe información (parámetros) y la usa para hacer su trabajo.</p>
+                    <p><strong>Como:</strong> Una calculadora que necesita números.</p>
+                </div>
+            </div>
+
+            <div class="funcion-card funcion-3">
+                <div class="funcion-header">
+                    <div class="funcion-icon">3</div>
+                    <div>
+                        <div class="funcion-title">Función con Retorno</div>
+                        <div class="funcion-desc">Devuelve un resultado</div>
+                    </div>
+                </div>
+                <div class="funcion-content">
+                    <p>Hace un cálculo o proceso y devuelve el resultado.</p>
+                    <p><strong>Como:</strong> Un horno que cocina y te da la comida.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: FUNCIONES SIMPLES -->
+        <section class="main-section">
+            <h2>1️⃣ Función Simple (sin parámetros ni retorno)</h2>
+            
+            <div class="analogia">
+                <h4>💡 Piénsalo así:</h4>
+                <p>Una función simple es como un <strong>botón de "Buenos días"</strong> que siempre dice lo mismo cuando lo presionas.</p>
+                <p><strong>Característica:</strong> Siempre hace exactamente lo mismo.</p>
+            </div>
+
+            <h3>¿Cómo se define?</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Estructura básica</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">nombre_funcion</span>():<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Código que se ejecuta</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Hola desde la función"</span>)<br><br>
+                        
+                        <span class="comment"># Para usar (llamar) la función:</span><br>
+                        <span class="function">nombre_funcion</span>()  <span class="comment"># Esto ejecuta la función</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>Ejemplos prácticos</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplo 1: Saludo fijo</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Definir la función</span><br>
+                        <span class="keyword">def</span> <span class="function">saludar</span>():<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Hola! Bienvenido al curso de Python"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Espero que aprendas mucho"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"-"</span> * <span class="number">30</span>)<br><br>
+                        
+                        <span class="comment"># Usar la función (puedes llamarla muchas veces)</span><br>
+                        <span class="function">saludar</span>()<br>
+                        <span class="function">saludar</span>()<br>
+                        <span class="function">saludar</span>()<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplo 2: Mostrar menú</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">mostrar_menu</span>():<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"\n"</span> + <span class="string">"═"</span> * <span class="number">30</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"        MENÚ PRINCIPAL"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"═"</span> * <span class="number">30</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"1. Ver perfil"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"2. Configuración"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"3. Salir"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"═"</span> * <span class="number">30</span>)<br><br>
+                        
+                        <span class="comment"># Programa principal</span><br>
+                        <span class="function">mostrar_menu</span>()<br>
+                        <span class="function">print</span>(<span class="string">"Usuario seleccionó opción 1"</span>)<br>
+                        <span class="function">mostrar_menu</span>()<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="ejemplo-visual">
+                <h4>🎯 ¿Cuándo usar funciones simples?</h4>
+                <p><strong>✅ Cuando necesitas repetir el mismo código muchas veces</strong></p>
+                <p><strong>✅ Para organizar tu programa en partes</strong></p>
+                <p><strong>✅ Cuando el código siempre hace lo mismo (sin variaciones)</strong></p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: FUNCIONES CON PARÁMETROS -->
+        <section class="main-section">
+            <h2>2️⃣ Función con Parámetros</h2>
+            
+            <div class="analogia">
+                <h4>💡 Piénsalo así:</h4>
+                <p>Una función con parámetros es como una <strong>calculadora</strong>: necesitas darle números para que haga la operación.</p>
+                <p><strong>Característica:</strong> Recibe información y trabaja con ella.</p>
+            </div>
+
+            <h3>¿Qué son los parámetros?</h3>
+            <p>Son <strong>variables especiales</strong> que reciben datos cuando llamas a la función. Son como "huecos" que se llenan con información.</p>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Sintaxis con parámetros</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">saludar_persona</span>(<span class="param">nombre</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># 'nombre' es el parámetro</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"¡Hola {nombre}! ¿Cómo estás?"</span>)<br><br>
+                        
+                        <span class="comment"># Llamar la función con diferentes datos</span><br>
+                        <span class="function">saludar_persona</span>(<span class="string">"Ana"</span>)      <span class="comment"># nombre = "Ana"</span><br>
+                        <span class="function">saludar_persona</span>(<span class="string">"Carlos"</span>)   <span class="comment"># nombre = "Carlos"</span><br>
+                        <span class="function">saludar_persona</span>(<span class="string">"María"</span>)    <span class="comment"># nombre = "María"</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>Ejemplos con múltiples parámetros</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplo 1: Calculadora básica</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">sumar</span>(<span class="param">a</span>, <span class="param">b</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;resultado = <span class="param">a</span> + <span class="param">b</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{a} + {b} = {resultado}"</span>)<br><br>
+                        
+                        <span class="keyword">def</span> <span class="function">multiplicar</span>(<span class="param">x</span>, <span class="param">y</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;resultado = <span class="param">x</span> * <span class="param">y</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{x} × {y} = {resultado}"</span>)<br><br>
+                        
+                        <span class="comment"># Usar las funciones</span><br>
+                        <span class="function">sumar</span>(<span class="number">5</span>, <span class="number">3</span>)        <span class="comment"># a=5, b=3</span><br>
+                        <span class="function">sumar</span>(<span class="number">10</span>, <span class="number">20</span>)      <span class="comment"># a=10, b=20</span><br>
+                        <span class="function">multiplicar</span>(<span class="number">4</span>, <span class="number">7</span>)   <span class="comment"># x=4, y=7</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplo 2: Formatear información</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">mostrar_usuario</span>(<span class="param">nombre</span>, <span class="param">edad</span>, <span class="param">ciudad</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"\n"</span> + <span class="string">"─"</span> * <span class="number">30</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"👤 Nombre: {nombre}"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"🎂 Edad: {edad} años"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"🏙️ Ciudad: {ciudad}"</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"─"</span> * <span class="number">30</span>)<br><br>
+                        
+                        <span class="comment"># Llamar con diferentes datos</span><br>
+                        <span class="function">mostrar_usuario</span>(<span class="string">"Ana"</span>, <span class="number">25</span>, <span class="string">"Quito"</span>)<br>
+                        <span class="function">mostrar_usuario</span>(<span class="string">"Carlos"</span>, <span class="number">30</span>, <span class="string">"Guayaquil"</span>)<br>
+                        <span class="function">mostrar_usuario</span>(<span class="string">"María"</span>, <span class="number">22</span>, <span class="string">"Cuenca"</span>)<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-item comparison-1">
+                    <h4>📌 Parámetro obligatorio</h4>
+                    <p>Debes pasar siempre un valor</p>
+                    <code>def funcion(param):</code>
+                </div>
+                
+                <div class="comparison-item comparison-2">
+                    <h4>📌 Parámetro por defecto</h4>
+                    <p>Tiene un valor predefinido</p>
+                    <code>def funcion(param=10):</code>
+                </div>
+                
+                <div class="comparison-item comparison-3">
+                    <h4>📌 Múltiples parámetros</h4>
+                    <p>Puedes tener varios</p>
+                    <code>def func(a, b, c):</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: FUNCIONES CON RETORNO -->
+        <section class="main-section">
+            <h2>3️⃣ Función con Retorno (return)</h2>
+            
+            <div class="analogia">
+                <h4>💡 Piénsalo así:</h4>
+                <p>Una función con retorno es como un <strong>horno</strong>: le das ingredientes (parámetros) y te devuelve un pastel cocinado (resultado).</p>
+                <p><strong>Característica:</strong> Procesa datos y devuelve un resultado que puedes usar.</p>
+            </div>
+
+            <h3>¿Qué hace return?</h3>
+            <p>La palabra <code>return</code> toma un valor y lo <strong>"devuelve"</strong> al lugar donde fue llamada la función. ¡Este valor se puede guardar en una variable!</p>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Sintaxis con return</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">duplicar</span>(<span class="param">numero</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;resultado = <span class="param">numero</span> * <span class="number">2</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> resultado  <span class="comment"># Devuelve el valor</span><br><br>
+                        
+                        <span class="comment"># Guardar el resultado en una variable</span><br>
+                        mi_resultado = <span class="function">duplicar</span>(<span class="number">5</span>)<br>
+                        <span class="function">print</span>(<span class="string">"El doble de 5 es:"</span>, mi_resultado)  <span class="comment"># 10</span><br><br>
+                        
+                        <span class="comment"># Usar directamente el resultado</span><br>
+                        <span class="function">print</span>(<span class="string">"El doble de 8 es:"</span>, <span class="function">duplicar</span>(<span class="number">8</span>))  <span class="comment"># 16</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>Ejemplos prácticos con retorno</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplo 1: Calculadora con retorno</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">calcular_area_rectangulo</span>(<span class="param">base</span>, <span class="param">altura</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;area = <span class="param">base</span> * <span class="param">altura</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> area<br><br>
+                        
+                        <span class="keyword">def</span> <span class="function">calcular_iva</span>(<span class="param">precio</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;iva = <span class="param">precio</span> * <span class="number">0.12</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> iva<br><br>
+                        
+                        <span class="comment"># Usar los resultados</span><br>
+                        area_sala = <span class="function">calcular_area_rectangulo</span>(<span class="number">5</span>, <span class="number">3</span>)<br>
+                        iva_producto = <span class="function">calcular_iva</span>(<span class="number">100</span>)<br>
+                        <br>
+                        <span class="function">print</span>(<span class="string">f"Área de la sala: {area_sala} m²"</span>)<br>
+                        <span class="function">print</span>(<span class="string">f"IVA de $100: ${iva_producto:.2f}"</span>)<br>
+                        <span class="function">print</span>(<span class="string">f"Total con IVA: ${100 + iva_producto:.2f}"</span>)<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplo 2: Validación con retorno booleano</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">es_par</span>(<span class="param">numero</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> <span class="param">numero</span> % <span class="number">2</span> == <span class="number">0</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">True</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">False</span><br><br>
+                        
+                        <span class="keyword">def</span> <span class="function">es_adulto</span>(<span class="param">edad</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="param">edad</span> >= <span class="number">18</span>  <span class="comment"># Devuelve True o False directamente</span><br><br>
+                        
+                        <span class="comment"># Usar en condiciones</span><br>
+                        numero = <span class="number">10</span><br>
+                        <span class="keyword">if</span> <span class="function">es_par</span>(numero):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{numero} es par"</span>)<br>
+                        <span class="keyword">else</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{numero} es impar"</span>)<br><br>
+                        
+                        edad = <span class="number">20</span><br>
+                        <span class="keyword">if</span> <span class="function">es_adulto</span>(edad):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Con {edad} años eres adulto"</span>)<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="ejemplo-visual">
+                <h4>⚠️ ¡IMPORTANTE!</h4>
+                <p><strong>¿Cuál es la diferencia entre print() y return?</strong></p>
+                <p><strong>print()</strong> → Muestra información en pantalla</p>
+                <p><strong>return</strong> → Devuelve un valor para usar en el programa</p>
+                <p><em>Una función puede tener ambos, pero normalmente tiene return si necesita devolver un resultado.</em></p>
+            </div>
+        </section>
+
+        <!-- EJERCICIOS PRÁCTICOS -->
+        <section class="ejercicios">
+            <h2>💪 Ejercicios para practicar</h2>
+            <p>Resuelve estos ejercicios usando los tres tipos de funciones que aprendiste.</p>
+            
+            <div class="ejercicio">
+                <h4>Ejercicio 1: Conversor de temperatura</h4>
+                <p>Crea una función que convierta grados Celsius a Fahrenheit usando la fórmula: <strong>F = (C × 9/5) + 32</strong></p>
+                <button class="solucion-btn" onclick="mostrarSolucion(1)">Ver solución</button>
+                <div class="solucion" id="solucion1">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">celsius_a_fahrenheit</span>(<span class="param">celsius</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;fahrenheit = (<span class="param">celsius</span> * <span class="number">9</span>/<span class="number">5</span>) + <span class="number">32</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> fahrenheit<br><br>
+                        
+                        <span class="comment"># Probar la función</span><br>
+                        temp_c = <span class="number">25</span><br>
+                        temp_f = <span class="function">celsius_a_fahrenheit</span>(temp_c)<br>
+                        <span class="function">print</span>(<span class="string">f"{temp_c}°C = {temp_f:.1f}°F"</span>)<br><br>
+                        
+                        <span class="comment"># Probemos con 0°C (punto de congelación)</span><br>
+                        <span class="function">print</span>(<span class="string">f"0°C = {celsius_a_fahrenheit(0):.1f}°F"</span>)<br>
+                        <span class="function">print</span>(<span class="string">f"100°C = {celsius_a_fahrenheit(100):.1f}°F"</span>)<br>
+                    </code>
+                </div>
+            </div>
+            
+            <div class="ejercicio">
+                <h4>Ejercicio 2: Calculadora de IMC</h4>
+                <p>Crea una función que calcule el Índice de Masa Corporal (IMC) con la fórmula: <strong>IMC = peso / (altura²)</strong></p>
+                <button class="solucion-btn" onclick="mostrarSolucion(2)">Ver solución</button>
+                <div class="solucion" id="solucion2">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">calcular_imc</span>(<span class="param">peso</span>, <span class="param">altura</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;imc = <span class="param">peso</span> / (<span class="param">altura</span> ** <span class="number">2</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> imc<br><br>
+                        
+                        <span class="keyword">def</span> <span class="function">clasificar_imc</span>(<span class="param">imc</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> <span class="param">imc</span> &lt; <span class="number">18.5</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Bajo peso"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> <span class="param">imc</span> &lt; <span class="number">25</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Peso normal"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> <span class="param">imc</span> &lt; <span class="number">30</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Sobrepeso"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Obesidad"</span><br><br>
+                        
+                        <span class="comment"># Ejemplo de uso</span><br>
+                        mi_imc = <span class="function">calcular_imc</span>(<span class="number">70</span>, <span class="number">1.75</span>)<br>
+                        clasificacion = <span class="function">clasificar_imc</span>(mi_imc)<br>
+                        <span class="function">print</span>(<span class="string">f"IMC: {mi_imc:.1f} - Clasificación: {clasificacion}"</span>)<br>
+                    </code>
+                </div>
+            </div>
+            
+            <div class="ejercicio">
+                <h4>Ejercicio 3: Generador de contraseñas simple</h4>
+                <p>Crea una función que genere una contraseña con el patrón: "ABC-123-XYZ" donde ABC son las primeras 3 letras del nombre y XYZ los últimos 3 números del año.</p>
+                <button class="solucion-btn" onclick="mostrarSolucion(3)">Ver solución</button>
+                <div class="solucion" id="solucion3">
+                    <code>
+                        <span class="keyword">def</span> <span class="function">generar_contraseña</span>(<span class="param">nombre</span>, <span class="param">año</span>):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Obtener primeras 3 letras en mayúsculas</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;iniciales = <span class="param">nombre</span>[:<span class="number">3</span>].upper()<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Obtener últimos 3 dígitos del año</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;digitos = str(<span class="param">año</span>)[-<span class="number">3</span>:]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Generar número aleatorio entre 100 y 999</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">import</span> random<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;numero = random.randint(<span class="number">100</span>, <span class="number">999</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Formar la contraseña</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;contraseña = f<span class="string">"{iniciales}-{numero}-{digitos}"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> contraseña<br><br>
+                        
+                        <span class="comment"># Probar la función</span><br>
+                        mi_contraseña = <span class="function">generar_contraseña</span>(<span class="string">"Fernando"</span>, <span class="number">2024</span>)<br>
+                        <span class="function">print</span>(<span class="string">f"Contraseña generada: {mi_contraseña}"</span>)<br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMULADOR INTERACTIVO -->
+        <section class="simulador">
+            <h2>💻 Simulador de Funciones</h2>
+            <p>Prueba diferentes funciones aquí mismo:</p>
+            
+            <div class="sim-controls">
+                <div class="sim-group">
+                    <label class="sim-label">Tipo de función:</label>
+                    <select id="func-type" class="sim-select">
+                        <option value="simple">1. Función Simple</option>
+                        <option value="param">2. Función con Parámetros</option>
+                        <option value="return">3. Función con Retorno</option>
+                    </select>
+                </div>
+                
+                <div class="sim-group">
+                    <label class="sim-label">Parámetro 1:</label>
+                    <input type="text" id="param1" class="sim-input" value="Juan">
+                </div>
+                
+                <div class="sim-group">
+                    <label class="sim-label">Parámetro 2:</label>
+                    <input type="text" id="param2" class="sim-input" value="25">
+                </div>
+                
+                <button onclick="ejecutarFuncion()" class="sim-btn">Ejecutar Función</button>
+            </div>
+            
+            <div class="sim-output" id="func-output">
+                El resultado aparecerá aquí...
+            </div>
+        </section>
+
+        <!-- RESUMEN FINAL -->
+        <section class="resumen">
+            <h2>🎯 Resumen: Las 3 funciones más utilizadas</h2>
+            
+            <div class="resumen-grid">
+                <div class="resumen-item">
+                    <h4>1️⃣ Función Simple</h4>
+                    <p><strong>Para:</strong> Ejecutar código repetitivo</p>
+                    <p><strong>No tiene:</strong> Parámetros ni retorno</p>
+                    <p><strong>Ejemplo:</strong> mostrar_menu()</p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4>2️⃣ Función con Parámetros</h4>
+                    <p><strong>Para:</strong> Trabajar con datos variables</p>
+                    <p><strong>Tiene:</strong> Parámetros de entrada</p>
+                    <p><strong>Ejemplo:</strong> saludar(nombre)</p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4>3️⃣ Función con Retorno</h4>
+                    <p><strong>Para:</strong> Calcular y devolver resultados</p>
+                    <p><strong>Tiene:</strong> Parámetros y return</p>
+                    <p><strong>Ejemplo:</strong> calcular_imc(peso, altura)</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                <h4>💡 Consejo final:</h4>
+                <p><strong>Empieza con funciones simples</strong> → <strong>Añade parámetros</strong> cuando necesites datos → <strong>Usa return</strong> cuando necesites resultados</p>
+                <p>¡Practica creando tus propias funciones!</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Funciones en Python - Tutorial práctico</p>
+            <p style="margin-top: 10px; color: var(--success);">Recuerda: Las funciones hacen tu código más organizado y reutilizable 🐍</p>
+        </footer>
+    </div>
+
+    <script>
+        // Función para copiar código
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const codeBlock = this.closest('.code-container').querySelector('.code-block');
+                const code = codeBlock.innerText;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = '✓ Copiado!';
+                    this.style.background = '#27ae60';
+                    this.style.borderColor = '#2ecc71';
+                    this.style.color = 'white';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                        this.style.borderColor = '';
+                        this.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+
+        // Mostrar/ocultar soluciones
+        function mostrarSolucion(numero) {
+            const solucion = document.getElementById(`solucion${numero}`);
+            const btn = event.target;
+            
+            if (solucion.style.display === 'block') {
+                solucion.style.display = 'none';
+                btn.textContent = 'Ver solución';
+            } else {
+                solucion.style.display = 'block';
+                btn.textContent = 'Ocultar solución';
+            }
+        }
+
+        // Simulador de funciones
+        function ejecutarFuncion() {
+            const tipo = document.getElementById('func-type').value;
+            const param1 = document.getElementById('param1').value;
+            const param2 = document.getElementById('param2').value;
+            const output = document.getElementById('func-output');
+            
+            let resultado = '';
+            
+            switch(tipo) {
+                case 'simple':
+                    resultado = 'FUNCIÓN SIMPLE EJECUTADA:\n';
+                    resultado += '═'.repeat(30) + '\n';
+                    resultado += '¡Hola! Esta es una función simple.\n';
+                    resultado += 'Siempre muestra el mismo mensaje.\n';
+                    resultado += 'No necesita datos de entrada.\n';
+                    resultado += '═'.repeat(30) + '\n';
+                    resultado += '\n¿Cómo funciona?\n';
+                    resultado += '1. Se define con: def nombre_funcion():\n';
+                    resultado += '2. Se llama con: nombre_funcion()\n';
+                    resultado += '3. Siempre hace lo mismo\n';
+                    break;
+                    
+                case 'param':
+                    resultado = 'FUNCIÓN CON PARÁMETROS EJECUTADA:\n';
+                    resultado += '═'.repeat(30) + '\n';
+                    resultado += `👤 Nombre recibido: ${param1}\n`;
+                    resultado += `🎂 Edad recibida: ${param2}\n`;
+                    resultado += '═'.repeat(30) + '\n';
+                    resultado += `\n¡Hola ${param1}! Tienes ${param2} años.\n`;
+                    resultado += `Dentro de 5 años tendrás ${parseInt(param2) + 5} años.\n\n`;
+                    resultado += '¿Cómo funciona?\n';
+                    resultado += '1. Recibe datos (parámetros)\n';
+                    resultado += '2. Usa esos datos para trabajar\n';
+                    resultado += '3. Cada llamada puede usar datos diferentes\n';
+                    break;
+                    
+                case 'return':
+                    resultado = 'FUNCIÓN CON RETORNO EJECUTADA:\n';
+                    resultado += '═'.repeat(30) + '\n';
+                    const num1 = parseInt(param2) || 0;
+                    const num2 = num1 * 2; // Simulación de cálculo
+                    const iva = num1 * 0.12;
+                    
+                    resultado += `📊 Cálculos realizados:\n`;
+                    resultado += `Número base: ${num1}\n`;
+                    resultado += `Doble del número: ${num2}\n`;
+                    resultado += `IVA (12%): ${iva.toFixed(2)}\n`;
+                    resultado += '═'.repeat(30) + '\n';
+                    resultado += `\nRESULTADO DEVUELTO: ${num2}\n\n`;
+                    resultado += '¿Cómo funciona?\n';
+                    resultado += '1. Recibe datos y los procesa\n';
+                    resultado += '2. Usa "return" para devolver un resultado\n';
+                    resultado += '3. El resultado se puede guardar en una variable\n';
+                    resultado += '4. O usar directamente donde se necesite\n';
+                    break;
+            }
+            
+            output.textContent = resultado;
+        }
+
+        // Actualizar placeholders según el tipo de función
+        document.getElementById('func-type').addEventListener('change', function() {
+            const tipos = {
+                'simple': { p1: 'No necesita', p2: 'No necesita' },
+                'param': { p1: 'Nombre (ej: Juan)', p2: 'Edad (ej: 25)' },
+                'return': { p1: 'Texto descriptivo', p2: 'Número para calcular (ej: 100)' }
+            };
+            
+            const seleccionado = tipos[this.value];
+            document.getElementById('param1').placeholder = seleccionado.p1;
+            document.getElementById('param2').placeholder = seleccionado.p2;
+            
+            // Establecer valores por defecto
+            if (this.value === 'simple') {
+                document.getElementById('param1').value = 'No aplica';
+                document.getElementById('param2').value = 'No aplica';
+            } else if (this.value === 'param') {
+                document.getElementById('param1').value = 'Juan';
+                document.getElementById('param2').value = '25';
+            } else {
+                document.getElementById('param1').value = 'Cálculo de IVA';
+                document.getElementById('param2').value = '100';
+            }
+        });
+
+        // Inicializar simulador
+        document.addEventListener('DOMContentLoaded', () => {
+            ejecutarFuncion();
+        });
+    </script>
+</body>
+</html>

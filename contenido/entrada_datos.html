@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Datos en Python</title>
+     <link rel="icon" type="image/x-icon" href="../image/python.png">
+    <link rel="stylesheet" href="../style/style_entrada_datos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="python-icon">🐍</div>
+            <h1>Entrada de Datos en Python</h1>
+            <p class="subtitle">Aprende a capturar información del usuario con input()</p>
+        </header>
+
+        <section class="section">
+            <h2>📌 Función input()</h2>
+            <p>La función <code>input()</code> es la forma más básica y común de capturar datos del usuario por teclado en Python.</p>
+            
+            <div class="code-block">
+                <code>
+                    <span class="function">nombre</span> = <span class="function">input</span>(<span class="string">"Ingresa tu nombre: "</span>)<br>
+                    <span class="function">print</span>(<span class="string">"Hola,"</span>, <span class="function">nombre</span>)<br>
+                </code>
+            </div>
+
+            <div class="note">
+                <h4>💡 Nota importante</h4>
+                <p>La función <code>input()</code> siempre devuelve una cadena de texto (string), incluso si el usuario ingresa números.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎯 Tipos de Entrada</h2>
+            
+            <h3>1. Entrada de Texto</h3>
+            <div class="code-block">
+                <code>
+                    <span class="comment"># Entrada básica de texto</span><br>
+                    <span class="function">nombre</span> = <span class="function">input</span>(<span class="string">"¿Cuál es tu nombre? "</span>)<br>
+                    <span class="function">ciudad</span> = <span class="function">input</span>(<span class="string">"¿En qué ciudad vives? "</span>)<br>
+                    <span class="function">print</span>(<span class="string">f"Hola {nombre} de {ciudad}!"</span>)<br>
+                </code>
+            </div>
+
+            <h3>2. Entrada de Números</h3>
+            <div class="code-block">
+                <code>
+                    <span class="comment"># Para números, debemos convertir el string a int o float</span><br>
+                    <span class="function">edad_str</span> = <span class="function">input</span>(<span class="string">"Ingresa tu edad: "</span>)<br>
+                    <span class="function">edad</span> = <span class="function">int</span>(<span class="function">edad_str</span>)  <span class="comment"># Convertir a entero</span><br><br>
+                    
+                    <span class="comment"># O en una sola línea:</span><br>
+                    <span class="function">edad</span> = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Ingresa tu edad: "</span>))<br><br>
+                    
+                    <span class="comment"># Para números decimales:</span><br>
+                    <span class="function">altura</span> = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Ingresa tu altura (metros): "</span>))<br>
+                </code>
+            </div>
+
+            <div class="warning">
+                <h4>⚠️ Cuidado con las conversiones</h4>
+                <p>Si el usuario ingresa algo que no sea un número válido, <code>int()</code> o <code>float()</code> lanzarán un error. Para manejar esto, puedes usar try-except.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🔧 Ejemplos Prácticos</h2>
+            
+            <div class="input-example">
+                <div class="input-card">
+                    <h4>Calculadora Simple</h4>
+                    <div class="code-block">
+                        <code>
+                            <span class="function">num1</span> = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Primer número: "</span>))<br>
+                            <span class="function">num2</span> = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"Segundo número: "</span>))<br>
+                            <span class="function">print</span>(<span class="string">f"Suma: {num1 + num2}"</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="input-card">
+                    <h4>Formulario Personal</h4>
+                    <div class="code-block">
+                        <code>
+                            <span class="function">nombre</span> = <span class="function">input</span>(<span class="string">"Nombre: "</span>)<br>
+                            <span class="function">edad</span> = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Edad: "</span>))<br>
+                            <span class="function">email</span> = <span class="function">input</span>(<span class="string">"Email: "</span>)<br>
+                            <span class="function">print</span>(<span class="string">f"Usuario: {nombre}, {edad} años, contacto: {email}"</span>)<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h3>Ejemplo: Programa de Bienvenida</h3>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Programa que saluda al usuario</span><br>
+                        <span class="function">print</span>(<span class="string">"=== BIENVENIDO ==="</span>)<br>
+                        <span class="function">nombre</span> = <span class="function">input</span>(<span class="string">"¿Cómo te llamas? "</span>)<br>
+                        <span class="function">edad</span> = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"¿Cuántos años tienes? "</span>))<br>
+                        <span class="function">ciudad</span> = <span class="function">input</span>(<span class="string">"¿De dónde eres? "</span>)<br><br>
+                        
+                        <span class="function">print</span>(<span class="string">f"\n¡Hola {nombre}!"</span>)<br>
+                        <span class="function">print</span>(<span class="string">f"Tienes {edad} años y vives en {ciudad}."</span>)<br>
+                        <span class="function">print</span>(<span class="string">f"El año que viene tendrás {edad + 1} años."</span>)<br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>⚡ Mejores Prácticas</h2>
+            
+            <div class="tip">
+                <h4>✅ Validación de Entrada</h4>
+                <p>Siempre valida los datos del usuario, especialmente cuando necesitas números:</p>
+                <div class="code-block">
+                    <code>
+                        <span class="keyword">while</span> <span class="keyword">True</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">edad</span> = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Ingresa tu edad: "</span>))<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>  <span class="comment"># Salir del bucle si la conversión es exitosa</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">except</span> <span class="function">ValueError</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Error: Debes ingresar un número válido."</span>)<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="tip">
+                <h4>✅ Mensajes Claros</h4>
+                <p>Siempre muestra mensajes claros al usuario sobre qué tipo de dato esperas:</p>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Buen ejemplo:</span><br>
+                        <span class="function">input</span>(<span class="string">"Ingresa tu peso en kg (ej: 65.5): "</span>)<br><br>
+                        
+                        <span class="comment"># Mal ejemplo:</span><br>
+                        <span class="function">input</span>(<span class="string">"Peso: "</span>)<br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="tip">
+                <h4>✅ Manejo de Múltiples Valores</h4>
+                <p>Para capturar múltiples valores en una sola línea:</p>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Separados por espacio</span><br>
+                        <span class="function">datos</span> = <span class="function">input</span>(<span class="string">"Ingresa nombre y edad: "</span>).<span class="function">split</span>()<br>
+                        <span class="function">nombre</span> = <span class="function">datos</span>[<span class="number">0</span>]<br>
+                        <span class="function">edad</span> = <span class="function">int</span>(<span class="function">datos</span>[<span class="number">1</span>])<br><br>
+                        
+                        <span class="comment"># O separados por coma</span><br>
+                        <span class="function">x</span>, <span class="function">y</span> = <span class="function">input</span>(<span class="string">"Ingresa X e Y separados por coma: "</span>).<span class="function">split</span>(<span class="string">","</span>)<br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <section class="try-it">
+            <h3>💻 Pruébalo Aquí</h3>
+            <div class="simulator">
+                <p>Simula una entrada de datos en Python:</p>
+                <input type="text" id="simInput" class="simulator-input" placeholder="Escribe algo aquí...">
+                <button onclick="processInput()" class="simulator-btn">Procesar Entrada</button>
+                <div class="output" id="output"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Entrada de Datos en Python - Tutorial Interactivo</p>
+        <p>Python 🐍 es un lenguaje poderoso y fácil de aprender</p>
+    </footer>
+
+    <script>
+        function processInput() {
+            const input = document.getElementById('simInput').value;
+            const output = document.getElementById('output');
+            
+            if (!input.trim()) {
+                output.innerHTML = '<span style="color: #dc3545">⚠️ No ingresaste ningún dato</span>';
+                return;
+            }
+            
+            // Simular diferentes procesamientos
+            if (!isNaN(input)) {
+                // Es un número
+                const num = parseFloat(input);
+                output.innerHTML = `
+                    <strong>Entrada detectada como número:</strong><br>
+                    Tipo: ${Number.isInteger(num) ? 'Entero (int)' : 'Decimal (float)'}<br>
+                    Valor: ${num}<br>
+                    Duplicado: ${num * 2}<br>
+                    Raíz cuadrada: ${Math.sqrt(Math.abs(num)).toFixed(2)}
+                `;
+            } else if (input.includes(',') || input.includes(' ')) {
+                // Múltiples valores
+                const values = input.split(input.includes(',') ? ',' : ' ');
+                output.innerHTML = `
+                    <strong>Múltiples valores detectados:</strong><br>
+                    Número de elementos: ${values.length}<br>
+                    Elementos: ${values.map(v => `"${v.trim()}"`).join(', ')}<br>
+                    Primer elemento: "${values[0].trim()}"<br>
+                    Último elemento: "${values[values.length - 1].trim()}"
+                `;
+            } else {
+                // Texto simple
+                output.innerHTML = `
+                    <strong>Entrada detectada como texto (string):</strong><br>
+                    Longitud: ${input.length} caracteres<br>
+                    En mayúsculas: "${input.toUpperCase()}"<br>
+                    En minúsculas: "${input.toLowerCase()}"<br>
+                    Invertido: "${input.split('').reverse().join('')}"
+                `;
+            }
+        }
+
+        // Permitir Enter para procesar
+        document.getElementById('simInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                processInput();
+            }
+        });
+    </script>
+</body>
+</html>

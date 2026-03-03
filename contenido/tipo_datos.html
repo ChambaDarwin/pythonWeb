@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Datos Básicos en Python</title>
+    <link rel="stylesheet" href="../style/style_tipo_datos.css">
+    <link rel="icon" type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="python-icon">🎯</div>
+            <h1>Tipos de Datos Básicos en Python</h1>
+            <p class="subtitle">Aprende los 4 tipos de datos fundamentales que necesitas para empezar a programar</p>
+            
+            <div class="tipos-mini">
+                <div class="tipo-mini mini-str">
+                    <span>str</span>
+                    <small>Texto</small>
+                </div>
+                <div class="tipo-mini mini-int">
+                    <span>int</span>
+                    <small>Enteros</small>
+                </div>
+                <div class="tipo-mini mini-float">
+                    <span>float</span>
+                    <small>Decimales</small>
+                </div>
+                <div class="tipo-mini mini-bool">
+                    <span>bool</span>
+                    <small>Verdadero/Falso</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- TARJETAS DE LOS 4 TIPOS BÁSICOS -->
+        <div class="tipos-grid">
+            <!-- STRING -->
+            <div class="tipo-card card-str">
+                <div class="tipo-header">
+                    <div class="tipo-icon">ABC</div>
+                    <div>
+                        <div class="tipo-title">String (str)</div>
+                        <div class="tipo-desc">Texto y palabras</div>
+                    </div>
+                </div>
+                <div class="tipo-content">
+                    <h3>¿Para qué sirve?</h3>
+                    <p>Para representar texto: nombres, mensajes, direcciones, etc.</p>
+                    
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Va entre comillas: "hola" o 'hola'</li>
+                        <li>Puede contener letras, números y símbolos</li>
+                        <li>Se puede cortar, unir y modificar</li>
+                        <li>Python lo detecta automáticamente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- INTEGER -->
+            <div class="tipo-card card-int">
+                <div class="tipo-header">
+                    <div class="tipo-icon">123</div>
+                    <div>
+                        <div class="tipo-title">Integer (int)</div>
+                        <div class="tipo-desc">Números enteros</div>
+                    </div>
+                </div>
+                <div class="tipo-content">
+                    <h3>¿Para qué sirve?</h3>
+                    <p>Para contar cosas: edad, cantidad, posiciones, etc.</p>
+                    
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>No tiene punto decimal</li>
+                        <li>Puede ser positivo o negativo</li>
+                        <li>Se puede sumar, restar, multiplicar</li>
+                        <li>Ideal para bucles y contadores</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FLOAT -->
+            <div class="tipo-card card-float">
+                <div class="tipo-header">
+                    <div class="tipo-icon">3.14</div>
+                    <div>
+                        <div class="tipo-title">Float</div>
+                        <div class="tipo-desc">Números decimales</div>
+                    </div>
+                </div>
+                <div class="tipo-content">
+                    <h3>¿Para qué sirve?</h3>
+                    <p>Para medidas precisas: precios, temperaturas, porcentajes.</p>
+                    
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Tiene punto decimal</li>
+                        <li>Puede ser positivo o negativo</li>
+                        <li>Útil para cálculos científicos</li>
+                        <li>Precisión limitada (15 decimales)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOOLEAN -->
+            <div class="tipo-card card-bool">
+                <div class="tipo-header">
+                    <div class="tipo-icon">✓✗</div>
+                    <div>
+                        <div class="tipo-title">Boolean (bool)</div>
+                        <div class="tipo-desc">Verdadero o Falso</div>
+                    </div>
+                </div>
+                <div class="tipo-content">
+                    <h3>¿Para qué sirve?</h3>
+                    <p>Para decisiones y condiciones: ¿está activo? ¿es mayor de edad?</p>
+                    
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Solo dos valores: True o False</li>
+                        <li>Mayúscula inicial (True, False)</li>
+                        <li>Resultado de comparaciones</li>
+                        <li>Fundamental para if/else</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLOS PRÁCTICOS -->
+        <section class="ejemplos-section">
+            <h2>📝 Ejemplos Prácticos</h2>
+            
+            <h3>1. Strings (Texto)</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplos de strings</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Strings con comillas simples o dobles</span><br>
+                        <span class="variable">nombre</span> = <span class="string">"Ana"</span><br>
+                        <span class="variable">apellido</span> = <span class="string">'García'</span><br>
+                        <span class="variable">direccion</span> = <span class="string">"Calle Principal 123"</span><br><br>
+                        
+                        <span class="comment"># String de varias líneas</span><br>
+                        <span class="variable">mensaje</span> = <span class="string">"""Hola,
+                        este es un mensaje
+                        de varias líneas"""</span><br><br>
+                        
+                        <span class="comment"># Operaciones con strings</span><br>
+                        <span class="variable">nombre_completo</span> = <span class="variable">nombre</span> + <span class="string">" "</span> + <span class="variable">apellido</span><br>
+                        <span class="function">print</span>(<span class="variable">nombre_completo</span>)  <span class="comment"># Ana García</span><br>
+                        <span class="function">print</span>(<span class="string">"Hola "</span> * <span class="number">3</span>)  <span class="comment"># Hola Hola Hola</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>2. Integers (Enteros)</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplos de enteros</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Números enteros positivos y negativos</span><br>
+                        <span class="variable">edad</span> = <span class="number">25</span><br>
+                        <span class="variable">cantidad_productos</span> = <span class="number">100</span><br>
+                        <span class="variable">temperatura</span> = <span class="operator">-</span><span class="number">5</span><br>
+                        <span class="variable">puntuacion</span> = <span class="number">0</span><br><br>
+                        
+                        <span class="comment"># Operaciones matemáticas</span><br>
+                        <span class="variable">suma</span> = <span class="number">10</span> + <span class="number">5</span>      <span class="comment"># 15</span><br>
+                        <span class="variable">resta</span> = <span class="number">20</span> - <span class="number">8</span>     <span class="comment"># 12</span><br>
+                        <span class="variable">multiplicacion</span> = <span class="number">6</span> * <span class="number">7</span>  <span class="comment"># 42</span><br>
+                        <span class="variable">division_entera</span> = <span class="number">10</span> // <span class="number">3</span> <span class="comment"># 3 (sin decimales)</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>3. Floats (Decimales)</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplos de decimales</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Números con punto decimal</span><br>
+                        <span class="variable">precio</span> = <span class="number">19.99</span><br>
+                        <span class="variable">pi</span> = <span class="number">3.141592</span><br>
+                        <span class="variable">temperatura</span> = <span class="number">23.5</span><br>
+                        <span class="variable">porcentaje</span> = <span class="number">0.12</span>  <span class="comment"># 12%</span><br><br>
+                        
+                        <span class="comment"># Operaciones con decimales</span><br>
+                        <span class="variable">total</span> = <span class="number">10.5</span> + <span class="number">3.2</span>   <span class="comment"># 13.7</span><br>
+                        <span class="variable">iva</span> = <span class="number">100</span> * <span class="number">0.12</span>    <span class="comment"># 12.0</span><br>
+                        <span class="variable">division</span> = <span class="number">10</span> / <span class="number">3</span>      <span class="comment"># 3.3333333333333335</span><br><br>
+                        
+                        <span class="comment"># Redondeo</span><br>
+                        <span class="variable">redondeado</span> = <span class="function">round</span>(<span class="variable">pi</span>, <span class="number">2</span>)  <span class="comment"># 3.14</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>4. Booleans (Verdadero/Falso)</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Ejemplos de booleanos</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Valores booleanos directos</span><br>
+                        <span class="variable">es_mayor</span> = <span class="bool">True</span><br>
+                        <span class="variable">tiene_licencia</span> = <span class="bool">False</span><br>
+                        <span class="variable">esta_activo</span> = <span class="bool">True</span><br><br>
+                        
+                        <span class="comment"># Booleanos de comparaciones</span><br>
+                        <span class="variable">resultado1</span> = <span class="number">10</span> > <span class="number">5</span>      <span class="comment"># True</span><br>
+                        <span class="variable">resultado2</span> = <span class="number">10</span> == <span class="number">5</span>     <span class="comment"># False</span><br>
+                        <span class="variable">resultado3</span> = <span class="string">"Ana"</span> == <span class="string">"ana"</span> <span class="comment"># False (diferente mayúscula)</span><br><br>
+                        
+                        <span class="comment"># Operadores lógicos</span><br>
+                        <span class="variable">and_result</span> = <span class="bool">True</span> <span class="keyword">and</span> <span class="bool">False</span>  <span class="comment"># False</span><br>
+                        <span class="variable">or_result</span> = <span class="bool">True</span> <span class="keyword">or</span> <span class="bool">False</span>   <span class="comment"># True</span><br>
+                        <span class="variable">not_result</span> = <span class="keyword">not</span> <span class="bool">True</span>         <span class="comment"># False</span><br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLA COMPARATIVA -->
+        <section class="comparativa">
+            <h2>📊 Tabla Comparativa</h2>
+            <p>Resumen rápido de los 4 tipos básicos:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Para qué sirve</th>
+                        <th>Ejemplo</th>
+                        <th>Operaciones comunes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-str">str</td>
+                        <td>Texto, nombres, mensajes</td>
+                        <td>"Hola", 'Python'</td>
+                        <td>+, *, len(), upper()</td>
+                    </tr>
+                    <tr>
+                        <td class="col-int">int</td>
+                        <td>Contar, posiciones, edad</td>
+                        <td>25, -10, 1000</td>
+                        <td>+, -, *, //, %</td>
+                    </tr>
+                    <tr>
+                        <td class="col-float">float</td>
+                        <td>Medidas, precios, porcentajes</td>
+                        <td>3.14, 99.99, -2.5</td>
+                        <td>+, -, *, /, round()</td>
+                    </tr>
+                    <tr>
+                        <td class="col-bool">bool</td>
+                        <td>Decisiones, condiciones</td>
+                        <td>True, False</td>
+                        <td>and, or, not, ==</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- DETECTOR DE TIPOS -->
+        <section class="detector">
+            <h3>🔍 Detecta el tipo de dato</h3>
+            <p>Escribe cualquier valor y descubre qué tipo es:</p>
+            
+            <input type="text" id="input-dato" class="detector-input" placeholder='Ej: "Hola", 25, 3.14, True' value='"Hola mundo"'>
+            <button onclick="detectarTipo()" class="detector-btn">Detectar Tipo</button>
+            
+            <div class="resultado" id="resultado-tipo">
+                Resultado aparecerá aquí...
+            </div>
+        </section>
+
+        <!-- CONVERSIONES ENTRE TIPOS -->
+        <section class="conversiones">
+            <h2>🔄 Conversiones entre tipos</h2>
+            <p>A veces necesitas cambiar un tipo a otro:</p>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Funciones de conversión</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># De texto a número (si es posible)</span><br>
+                        <span class="variable">texto_numero</span> = <span class="string">"25"</span><br>
+                        <span class="variable">entero</span> = <span class="function">int</span>(<span class="variable">texto_numero</span>)     <span class="comment"># 25 (int)</span><br>
+                        <span class="variable">decimal</span> = <span class="function">float</span>(<span class="variable">texto_numero</span>)   <span class="comment"># 25.0 (float)</span><br><br>
+                        
+                        <span class="comment"># De número a texto (siempre funciona)</span><br>
+                        <span class="variable">edad</span> = <span class="number">30</span><br>
+                        <span class="variable">edad_texto</span> = <span class="function">str</span>(<span class="variable">edad</span>)  <span class="comment"># "30" (str)</span><br><br>
+                        
+                        <span class="comment"># A booleano (0, "", None son False, lo demás True)</span><br>
+                        <span class="variable">bool1</span> = <span class="function">bool</span>(<span class="number">0</span>)      <span class="comment"># False</span><br>
+                        <span class="variable">bool2</span> = <span class="function">bool</span>(<span class="number">1</span>)      <span class="comment"># True</span><br>
+                        <span class="variable">bool3</span> = <span class="function">bool</span>(<span class="string">""</span>)     <span class="comment"># False (string vacío)</span><br>
+                        <span class="variable">bool4</span> = <span class="function">bool</span>(<span class="string">"Hola"</span>) <span class="comment"># True</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <div class="conversion-grid">
+                <div class="conversion-item" style="border-left: 4px solid var(--str-color);">
+                    <h4>str()</h4>
+                    <p>Convierte a texto</p>
+                    <code>str(25) → "25"</code>
+                </div>
+                <div class="conversion-item" style="border-left: 4px solid var(--int-color);">
+                    <h4>int()</h4>
+                    <p>Convierte a entero</p>
+                    <code>int("25") → 25</code>
+                </div>
+                <div class="conversion-item" style="border-left: 4px solid var(--float-color);">
+                    <h4>float()</h4>
+                    <p>Convierte a decimal</p>
+                    <code>float("3.14") → 3.14</code>
+                </div>
+                <div class="conversion-item" style="border-left: 4px solid var(--bool-color);">
+                    <h4>bool()</h4>
+                    <p>Convierte a True/False</p>
+                    <code>bool(1) → True</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMEN FINAL -->
+        <section class="resumen">
+            <h2>🎯 Resumen: Los 4 tipos básicos</h2>
+            
+            <div class="resumen-grid">
+                <div class="resumen-item">
+                    <h4 style="color: var(--str-color);">🔤 String</h4>
+                    <p><strong>Para:</strong> Texto y palabras</p>
+                    <p><strong>Crear:</strong> "texto" o 'texto'</p>
+                    <p><strong>Clave:</strong> Comillas</p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4 style="color: var(--int-color);">🔢 Integer</h4>
+                    <p><strong>Para:</strong> Contar cosas</p>
+                    <p><strong>Crear:</strong> 25, -10, 0</p>
+                    <p><strong>Clave:</strong> Sin punto decimal</p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4 style="color: var(--float-color);">📐 Float</h4>
+                    <p><strong>Para:</strong> Medidas precisas</p>
+                    <p><strong>Crear:</strong> 3.14, 99.99</p>
+                    <p><strong>Clave:</strong> Con punto decimal</p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4 style="color: var(--bool-color);">✅ Boolean</h4>
+                    <p><strong>Para:</strong> Decisiones sí/no</p>
+                    <p><strong>Crear:</strong> True o False</p>
+                    <p><strong>Clave:</strong> Mayúscula inicial</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                <h4>💡 Consejo final:</h4>
+                <p><strong>Python detecta automáticamente</strong> el tipo de dato. ¡No necesitas decírselo!</p>
+                <p>Solo preocúpate por usar las <strong>comillas para texto</strong> y el <strong>punto para decimales</strong>.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Tipos de Datos Básicos en Python</p>
+            <p style="margin-top: 10px; color: var(--int-color);">¡Con estos 4 tipos ya puedes empezar a programar! 🐍</p>
+        </footer>
+    </div>
+
+    <script>
+        // Función para copiar código
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const codeBlock = this.closest('.code-container').querySelector('.code-block');
+                const code = codeBlock.innerText;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = '✓ Copiado!';
+                    this.style.background = '#27ae60';
+                    this.style.borderColor = '#2ecc71';
+                    this.style.color = 'white';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                        this.style.borderColor = '';
+                        this.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+
+        // Detector de tipos
+        function detectarTipo() {
+            const input = document.getElementById('input-dato').value.trim();
+            const resultado = document.getElementById('resultado-tipo');
+            
+            if (!input) {
+                resultado.textContent = "❌ Por favor, escribe algo en el campo de texto";
+                return;
+            }
+            
+            let tipo = "";
+            let valor = input;
+            let ejemplo = "";
+            
+            // Detectar tipo de dato
+            if (input === 'True' || input === 'False') {
+                tipo = "bool (Booleano)";
+                valor = input === 'True';
+                ejemplo = "True o False (para decisiones)";
+            } else if (!isNaN(input) && input !== '') {
+                if (input.includes('.')) {
+                    tipo = "float (Decimal)";
+                    valor = parseFloat(input);
+                    ejemplo = "3.14, 99.99 (con punto decimal)";
+                } else {
+                    tipo = "int (Entero)";
+                    valor = parseInt(input);
+                    ejemplo = "25, -10, 1000 (sin decimales)";
+                }
+            } else {
+                // Es string
+                tipo = "str (String/Texto)";
+                // Quitar comillas si las tiene
+                if ((input.startsWith('"') && input.endsWith('"')) || 
+                    (input.startsWith("'") && input.endsWith("'"))) {
+                    valor = input.slice(1, -1);
+                }
+                ejemplo = '"Hola", \'Mundo\' (entre comillas)';
+            }
+            
+            resultado.innerHTML = `
+                🔍 <strong>ANÁLISIS:</strong>
+                ══════════════════════════════════════
+                
+                📝 <strong>Entrada:</strong> ${input}
+                🎯 <strong>Tipo detectado:</strong> ${tipo}
+                💾 <strong>Valor Python:</strong> ${valor}
+                📚 <strong>Ejemplos típicos:</strong> ${ejemplo}
+                
+                ══════════════════════════════════════
+                
+                💡 <strong>Consejo:</strong> 
+                ${tipo === "str (String/Texto)" ? 'Usa comillas ("") para texto' : 
+                  tipo === "int (Entero)" ? 'Sin punto decimal para números enteros' :
+                  tipo === "float (Decimal)" ? 'Con punto decimal para medidas precisas' :
+                  'True o False (con mayúscula) para decisiones'}
+            `;
+        }
+
+        // Permitir Enter en el detector
+        document.getElementById('input-dato').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                detectarTipo();
+            }
+        });
+
+        // Inicializar detector
+        document.addEventListener('DOMContentLoaded', () => {
+            detectarTipo();
+        });
+    </script>
+</body>
+</html>

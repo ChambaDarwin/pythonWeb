@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python: if y match | Ejemplos</title>
+    <link rel="stylesheet" href="../style/sentencias_control.css">
+    <link rel="icon" type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="python-icon">🐍</div>
+            <h1>if y match en Python</h1>
+            <p class="subtitle">Aprende cuándo usar sentencias condicionales tradicionales (if/elif/else) y cuándo usar la nueva estructura match (Python 3.10+)</p>
+            
+            <div class="comparison-badges">
+                <div class="badge badge-if">
+                    <span>if/elif/else</span>
+                    <small>(Python 2.x - 3.x)</small>
+                </div>
+                <div class="badge badge-match">
+                    <span>match/case</span>
+                    <small>(Python 3.10+)</small>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <!-- SECCIÓN IF -->
+            <section class="section section-if">
+                <h2>🎯 Sentencia if</h2>
+                <p>La sentencia <code>if</code> es la estructura condicional tradicional en Python, disponible desde las primeras versiones.</p>
+
+                <h3>Sintaxis Básica</h3>
+                <div class="code-container">
+                    <div class="code-header code-header-if">
+                        <span>Estructura if/elif/else</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Evaluación de condiciones</span><br>
+                            edad = <span class="number">25</span><br><br>
+                            
+                            <span class="keyword">if</span> edad &lt; <span class="number">13</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Niño"</span>)<br>
+                            <span class="keyword">elif</span> edad &lt; <span class="number">20</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Adolescente"</span>)<br>
+                            <span class="keyword">elif</span> edad &lt; <span class="number">65</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Adulto"</span>)<br>
+                            <span class="keyword">else</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Adulto mayor"</span>)<br><br>
+                            
+                            <span class="comment"># Con operadores lógicos</span><br>
+                            <span class="keyword">if</span> edad >= <span class="number">18</span> <span class="keyword">and</span> edad &lt;= <span class="number">30</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Joven adulto"</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <h3>Características Principales</h3>
+                    <div class="feature-item feature-if">
+                        <h4>✅ Flexibilidad total</h4>
+                        <p>Puedes usar cualquier expresión booleana como condición.</p>
+                    </div>
+                    <div class="feature-item feature-if">
+                        <h4>✅ Anidamiento ilimitado</h4>
+                        <p>Puedes anidar if dentro de otros if según sea necesario.</p>
+                    </div>
+                    <div class="feature-item feature-if">
+                        <h4>✅ Compatibilidad universal</h4>
+                        <p>Funciona en todas las versiones de Python 2.x y 3.x.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN MATCH -->
+            <section class="section section-match">
+                <h2>🔀 Sentencia match <span class="version-badge">3.10+</span></h2>
+                <p>La sentencia <code>match</code> (introducida en Python 3.10) permite coincidencia de patrones más expresiva.</p>
+
+                <h3>Sintaxis Básica</h3>
+                <div class="code-container">
+                    <div class="code-header code-header-match">
+                        <span>Estructura match/case</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Coincidencia de patrones simple</span><br>
+                            dia = <span class="string">"lunes"</span><br><br>
+                            
+                            <span class="keyword">match</span> dia:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> <span class="string">"lunes"</span> | <span class="string">"martes"</span> | <span class="string">"miércoles"</span> |<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"jueves"</span> | <span class="string">"viernes"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Día laboral"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> <span class="string">"sábado"</span> | <span class="string">"domingo"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Fin de semana"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> _:  <span class="comment"># Caso por defecto</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Día inválido"</span>)<br><br>
+                            
+                            <span class="comment"># Coincidencia con asignación</span><br>
+                            <span class="keyword">match</span> usuario:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> {<span class="string">"nombre"</span>: nombre, <span class="string">"edad"</span>: edad}:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Usuario {nombre}, {edad} años"</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <h3>Características Principales</h3>
+                    <div class="feature-item feature-match">
+                        <h4>✅ Coincidencia de patrones</h4>
+                        <p>Puede coincidir con patrones complejos, no solo valores simples.</p>
+                    </div>
+                    <div class="feature-item feature-match">
+                        <h4>✅ Sintaxis más limpia</h4>
+                        <p>Para muchos casos, es más legible que múltiples if/elif.</p>
+                    </div>
+                    <div class="feature-item feature-match">
+                        <h4>✅ Asignación en coincidencia</h4>
+                        <p>Puede extraer valores mientras hace coincidencias.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TABLA DE COMPARACIÓN -->
+            <section class="comparison-section">
+                <h2>📊 Comparación Directa</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>if/elif/else</th>
+                            <th>match/case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Versión mínima</strong></td>
+                            <td class="if-cell">Python 2.0+</td>
+                            <td class="match-cell">Python 3.10+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coincidencia simple</strong></td>
+                            <td>✅ Igualdad (==)</td>
+                            <td>✅ Igualdad (==)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coincidencia múltiple</strong></td>
+                            <td>❌ Necesita or explícito</td>
+                            <td>✅ Con | (pipe)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Patrones complejos</strong></td>
+                            <td>❌ No disponible</td>
+                            <td>✅ Listas, diccionarios, etc.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Expresiones booleanas</strong></td>
+                            <td>✅ Cualquier expresión</td>
+                            <td>❌ Limitado a patrones</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Asignación en coincidencia</strong></td>
+                            <td>❌ No disponible</td>
+                            <td>✅ Extrae valores</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legibilidad casos simples</strong></td>
+                            <td>✅ Buena</td>
+                            <td>✅ Muy buena</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legibilidad casos complejos</strong></td>
+                            <td>✅ Depende del anidamiento</td>
+                            <td>✅ Excelente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- DEMO INTERACTIVO -->
+            <section class="demo-section">
+                <h2>💻 Demo Interactivo</h2>
+                <p>Prueba el mismo escenario con ambas sentencias:</p>
+                
+                <div class="demo-controls">
+                    <select id="demo-scenario" class="demo-select">
+                        <option value="dia">Día de la semana</option>
+                        <option value="edad">Categoría por edad</option>
+                        <option value="usuario">Datos de usuario</option>
+                        <option value="punto">Coordenadas punto</option>
+                    </select>
+                    
+                    <input type="text" id="demo-input" class="demo-select" placeholder="Valor de entrada..." value="martes">
+                    
+                    <button onclick="runDemo()" class="demo-btn">Ejecutar Comparación</button>
+                </div>
+
+                <div class="demo-output">
+                    <div class="output-box output-if">
+                        <h4>🎯 Con if/elif/else</h4>
+                        <div class="output-content" id="output-if">Selecciona un escenario...</div>
+                    </div>
+                    
+                    <div class="output-box output-match">
+                        <h4>🔀 Con match/case</h4>
+                        <div class="output-content" id="output-match">Selecciona un escenario...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GUÍA DE DECISIÓN -->
+            <section class="guide-section">
+                <h2>🤔 ¿Cuál usar? Guía de Decisión</h2>
+                
+                <div class="guide-grid">
+                    <div class="guide-card guide-if">
+                        <h4>✅ Usa if/elif/else cuando...</h4>
+                        <ul class="use-case-list">
+                            <li>📌 Necesitas compatibilidad con Python &lt; 3.10</li>
+                            <li>📌 Las condiciones son expresiones booleanas complejas</li>
+                            <li>📌 Necesitas evaluar rangos numéricos específicos</li>
+                            <li>📌 Requieres anidamiento profundo de condiciones</li>
+                            <li>📌 Las condiciones no son solo de igualdad</li>
+                            <li>📌 Evalúas múltiples variables independientes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guide-card guide-match">
+                        <h4>✅ Usa match/case cuando...</h4>
+                        <ul class="use-case-list">
+                            <li>🎯 Tienes Python 3.10+ y es aceptable como requisito</li>
+                            <li>🎯 Estás comparando una variable contra múltiples valores</li>
+                            <li>🎯 Necesitas coincidencia de patrones complejos</li>
+                            <li>🎯 Quieres extraer valores durante la coincidencia</li>
+                            <li>🎯 Buscas máxima legibilidad para casos específicos</li>
+                            <li>🎯 Trabajas con estructuras de datos anidadas</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- EJEMPLOS AVANZADOS -->
+        <section class="comparison-section">
+            <h2>🚀 Ejemplos Avanzados</h2>
+            
+            <div class="content-grid" style="margin-top: 20px;">
+                <div class="section section-if">
+                    <h3>🎯 if Avanzado</h3>
+                    <div class="code-container">
+                        <div class="code-header code-header-if">
+                            <span>Condiciones complejas</span>
+                            <button class="copy-btn">Copiar código</button>
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                <span class="comment"># Validación múltiple de rangos</span><br>
+                                temperatura = <span class="number">25</span><br>
+                                humedad = <span class="number">70</span><br>
+                                velocidad_viento = <span class="number">15</span><br><br>
+                                
+                                <span class="keyword">if</span> (<span class="number">20</span> &lt;= temperatura &lt;= <span class="number">30</span> <span class="keyword">and</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;humedad &lt; <span class="number">80</span> <span class="keyword">and</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;velocidad_viento &lt; <span class="number">20</span>):<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Día perfecto para salir"</span>)<br>
+                                <span class="keyword">elif</span> temperatura &gt; <span class="number">35</span> <span class="keyword">or</span> humedad &gt; <span class="number">90</span>:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Mejor quedarse en casa"</span>)<br>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section section-match">
+                    <h3>🔀 match Avanzado</h3>
+                    <div class="code-container">
+                        <div class="code-header code-header-match">
+                            <span>Patrones complejos</span>
+                            <button class="copy-btn">Copiar código</button>
+                        </div>
+                        <div class="code-block">
+                            <code>
+                                <span class="comment"># Coincidencia con estructuras</span><br>
+                                respuesta = {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"status"</span>: <span class="number">200</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"data"</span>: {<span class="string">"user"</span>: <span class="string">"Juan"</span>, <span class="string">"id"</span>: <span class="number">123</span>}<br>
+                                }<br><br>
+                                
+                                <span class="keyword">match</span> respuesta:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> {<span class="string">"status"</span>: <span class="number">200</span>, <span class="string">"data"</span>: datos}:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Éxito: {datos}"</span>)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> {<span class="string">"status"</span>: <span class="number">404</span>}:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Recurso no encontrado"</span>)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> {<span class="string">"status"</span>: s} <span class="keyword">if</span> s >= <span class="number">500</span>:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Error del servidor"</span>)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">case</span> _:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Respuesta desconocida"</span>)<br>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCLUSIÓN -->
+        <div class="conclusion">
+            <h3>🎯 Conclusión</h3>
+            <p><strong>if/elif/else</strong> sigue siendo esencial para condiciones complejas y cuando necesitas compatibilidad con versiones anteriores.</p>
+            <p><strong>match/case</strong> es una excelente adición para Python 3.10+, especialmente cuando trabajas con coincidencia de patrones y quieres mejorar la legibilidad del código.</p>
+            <p><em>Recomendación:</em> Usa <code>match</code> cuando sea apropiado para mejorar la claridad, pero mantén <code>if</code> en tu arsenal para situaciones más complejas o cuando necesites compatibilidad.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 Python if vs match Tutorial | 🐍 Aprende a elegir la herramienta correcta para cada situación</p>
+            <p style="margin-top: 10px; color: var(--if-color);">if/elif/else: Versátil y compatible | match/case: Moderno y expresivo</p>
+        </footer>
+    </div>
+
+    <script>
+        // Función para copiar código
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const codeBlock = btn.closest('.code-container').querySelector('.code-block');
+                const code = codeBlock.innerText;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Copiado!';
+                    btn.style.background = '#2ecc71';
+                    btn.style.borderColor = '#27ae60';
+                    
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.style.borderColor = '';
+                    }, 2000);
+                });
+            });
+        });
+
+        // Datos para el demo
+        const demoData = {
+            dia: {
+                input: "martes",
+                ifCode: `dia = "martes"
+
+if dia in ["lunes", "martes", "miércoles", "jueves", "viernes"]:
+    print("Día laboral")
+elif dia in ["sábado", "domingo"]:
+    print("Fin de semana")
+else:
+    print("Día inválido")`,
+                matchCode: `dia = "martes"
+
+match dia:
+    case "lunes" | "martes" | "miércoles" | "jueves" | "viernes":
+        print("Día laboral")
+    case "sábado" | "domingo":
+        print("Fin de semana")
+    case _:
+        print("Día inválido")`
+            },
+            edad: {
+                input: "25",
+                ifCode: `edad = 25
+
+if edad < 13:
+    print("Niño")
+elif edad < 20:
+    print("Adolescente")
+elif edad < 65:
+    print("Adulto")
+else:
+    print("Adulto mayor")`,
+                matchCode: `edad = 25
+
+match edad:
+    case e if e < 13:
+        print("Niño")
+    case e if e < 20:
+        print("Adolescente")
+    case e if e < 65:
+        print("Adulto")
+    case _:
+        print("Adulto mayor")`
+            },
+            usuario: {
+                input: '{"nombre": "Ana", "edad": 30}',
+                ifCode: `import json
+usuario = json.loads('{"nombre": "Ana", "edad": 30}')
+
+if "nombre" in usuario and "edad" in usuario:
+    print(f"Usuario {usuario['nombre']}, {usuario['edad']} años")
+else:
+    print("Datos incompletos")`,
+                matchCode: `import json
+usuario = json.loads('{"nombre": "Ana", "edad": 30}')
+
+match usuario:
+    case {"nombre": nombre, "edad": edad}:
+        print(f"Usuario {nombre}, {edad} años")
+    case _:
+        print("Datos incompletos")`
+            },
+            punto: {
+                input: "(0, 5)",
+                ifCode: `x, y = 0, 5
+
+if x == 0 and y == 0:
+    print("Origen")
+elif x == 0:
+    print(f"En eje Y, altura: {y}")
+elif y == 0:
+    print(f"En eje X, posición: {x}")
+else:
+    print(f"Punto en ({x}, {y})")`,
+                matchCode: `punto = (0, 5)
+
+match punto:
+    case (0, 0):
+        print("Origen")
+    case (0, y):
+        print(f"En eje Y, altura: {y}")
+    case (x, 0):
+        print(f"En eje X, posición: {x}")
+    case (x, y):
+        print(f"Punto en ({x}, {y})")`
+            }
+        };
+
+        // Función para ejecutar el demo
+        function runDemo() {
+            const scenario = document.getElementById('demo-scenario').value;
+            const userInput = document.getElementById('demo-input').value;
+            const data = demoData[scenario];
+            
+            // Actualizar salida if
+            let ifOutput = data.ifCode.replace(data.input, userInput);
+            document.getElementById('output-if').textContent = ifOutput;
+            
+            // Actualizar salida match
+            let matchOutput = data.matchCode.replace(data.input, userInput);
+            document.getElementById('output-match').textContent = matchOutput;
+            
+            // Resaltar sintaxis (simplificado)
+            highlightSyntax();
+        }
+
+        // Función para resaltar sintaxis (simplificada)
+        function highlightSyntax() {
+            const codeElements = document.querySelectorAll('.output-content');
+            codeElements.forEach(el => {
+                let html = el.textContent
+                    .replace(/(".*?")/g, '<span class="string">$1</span>')
+                    .replace(/(\b\d+\b)/g, '<span class="number">$1</span>')
+                    .replace(/\b(if|elif|else|match|case|and|or|in)\b/g, '<span class="keyword">$1</span>')
+                    .replace(/\b(print|json)\b/g, '<span class="function">$1</span>')
+                    .replace(/#.*$/gm, '<span class="comment">$&</span>');
+                el.innerHTML = html;
+            });
+        }
+
+        // Inicializar demo con el primer escenario
+        document.addEventListener('DOMContentLoaded', () => {
+            runDemo();
+            
+            // Actualizar input según el escenario seleccionado
+            document.getElementById('demo-scenario').addEventListener('change', function() {
+                const scenario = this.value;
+                document.getElementById('demo-input').value = demoData[scenario].input;
+            });
+            
+            // Permitir Enter en el input
+            document.getElementById('demo-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    runDemo();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

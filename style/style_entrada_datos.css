@@ -1,0 +1,259 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #f1f1f1;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #00b4d8, #90e0ef);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #90e0ef;
+            opacity: 0.9;
+        }
+
+        .python-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background: rgba(30, 30, 46, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #00b4d8;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-left: 4px solid #00b4d8;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #90e0ef;
+            margin: 25px 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #00b4d8;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        code {
+            color: #d4d4d4;
+            font-size: 1rem;
+        }
+
+        .keyword { color: #569cd6; }
+        .function { color: #dcdcaa; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; }
+        .number { color: #b5cea8; }
+        .input { color: #9cdcfe; }
+
+        .example-box {
+            background: rgba(0, 180, 216, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(0, 180, 216, 0.3);
+        }
+
+        .note {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .note h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            background: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning h4 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+
+        .tip {
+            background: rgba(40, 167, 69, 0.1);
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        .input-example {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .input-card {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(15, 52, 96, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .input-card:hover {
+            background: rgba(15, 52, 96, 0.5);
+            transform: scale(1.05);
+        }
+
+        .input-card h4 {
+            color: #90e0ef;
+            margin-bottom: 10px;
+        }
+
+        .input-card code {
+            color: #00b4d8;
+            font-size: 1.1rem;
+        }
+
+        .try-it {
+            background: linear-gradient(135deg, #0f3460, #1a1a2e);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .try-it h3 {
+            color: #90e0ef;
+            margin-bottom: 20px;
+        }
+
+        .simulator {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 25px;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .simulator-input {
+            width: 100%;
+            padding: 12px;
+            background: #2d2d2d;
+            border: 1px solid #00b4d8;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .simulator-btn {
+            background: linear-gradient(90deg, #00b4d8, #0077b6);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .simulator-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .output {
+            margin-top: 15px;
+            padding: 15px;
+            background: #2d2d2d;
+            border-radius: 5px;
+            min-height: 50px;
+            color: #90e0ef;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #90e0ef;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .input-example {
+                flex-direction: column;
+            }
+        }
+  

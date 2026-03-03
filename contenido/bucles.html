@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles en Python - Teoría y Práctica</title>
+    <link rel="stylesheet" href="../style/style_bucles.css">
+<link rel="icon"  type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="python-icon">🔄</div>
+            <h1>Bucles en Python - Teoría Sencilla</h1>
+            <p class="subtitle">Aprende los conceptos básicos de bucles de manera fácil y práctica. ¡Sin complicaciones!</p>
+        </header>
+
+        <!-- TABS DE NAVEGACIÓN -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="concepto">
+                📚 Concepto Básico
+            </button>
+            <button class="tab-btn" data-tab="for">
+                🔄 Bucle For
+            </button>
+            <button class="tab-btn" data-tab="while">
+                ⏱️ Bucle While
+            </button>
+            <button class="tab-btn" data-tab="control">
+                ⚡ Control de Bucles
+            </button>
+            <button class="tab-btn" data-tab="practica">
+                💪 Práctica
+            </button>
+        </div>
+
+        <!-- PESTAÑA 1: CONCEPTO BÁSICO -->
+        <div id="concepto" class="tab-content active">
+            <div class="concept-card">
+                <h2>📚 ¿Qué es un Bucle?</h2>
+                
+                <div class="analogia">
+                    <h4>💡 Piénsalo así...</h4>
+                    <p>Un bucle es como una <strong>playlist que se repite</strong>. Cuando termina la última canción, vuelve a empezar desde la primera.</p>
+                    <p>O como cuando <strong>comes galletas</strong>: "Mientras haya galletas en el plato, sigue comiendo" 🍪</p>
+                </div>
+
+                <h3>¿Para qué sirven los bucles?</h3>
+                <p>Los bucles nos ayudan a <strong>repetir tareas</strong> sin tener que escribir el mismo código una y otra vez.</p>
+
+                <div class="ejemplo-visual">
+                    <h4>📝 Ejemplo de la vida real:</h4>
+                    <div class="pasos">
+                        <div class="paso">
+                            <span class="paso-num">1</span>
+                            <strong>Sin bucle:</strong> "Lava plato 1", "Lava plato 2", "Lava plato 3"...
+                        </div>
+                        <div class="paso">
+                            <span class="paso-num">2</span>
+                            <strong>Con bucle:</strong> "Mientras haya platos sucios, lava un plato"
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Tipos de bucles en Python</h3>
+                <div class="comparison">
+                    <div class="comparison-card comparison-for">
+                        <h4>🔄 Bucle FOR</h4>
+                        <p><strong>"PARA cada elemento en una lista, haz algo"</strong></p>
+                        <ul>
+                            <li>Sabemos cuántas veces se repetirá</li>
+                            <li>Se usa con listas, rangos, textos</li>
+                            <li>Para recorrer elementos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card comparison-while">
+                        <h4>⏱️ Bucle WHILE</h4>
+                        <p><strong>"MIENTRAS sea verdad, haz algo"</strong></p>
+                        <ul>
+                            <li>No sabemos cuántas veces se repetirá</li>
+                            <li>Se usa con condiciones</li>
+                            <li>Para repetir hasta que algo cambie</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resumen">
+                    <h4>🎯 En resumen:</h4>
+                    <p><strong>FOR</strong> = "Haz esto 10 veces" (sabemos el número)</p>
+                    <p><strong>WHILE</strong> = "Sigue haciendo esto hasta que dejes de tener hambre" (no sabemos cuándo terminará)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 2: BUCLE FOR -->
+        <div id="for" class="tab-content">
+            <div class="concept-card">
+                <h2>🔄 Bucle FOR - Recorriendo Elementos</h2>
+                
+                <div class="analogia">
+                    <h4>💡 Analogía simple:</h4>
+                    <p>Un bucle FOR es como <strong>revisar cada estudiante en una lista de clase</strong>:</p>
+                    <p>"Para cada estudiante en la lista, llama su nombre"</p>
+                </div>
+
+                <h3>Sintaxis básica</h3>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Estructura del bucle FOR</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Para cada elemento en una lista</span><br>
+                            <span class="keyword">for</span> <span class="variable">elemento</span> <span class="keyword">in</span> <span class="variable">lista</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Haz algo con el elemento</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="variable">elemento</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <h3>Ejemplos prácticos</h3>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo 1: Recorrer una lista</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Lista de frutas</span><br>
+                            frutas = [<span class="string">"manzana"</span>, <span class="string">"banana"</span>, <span class="string">"naranja"</span>]<br><br>
+                            
+                            <span class="keyword">for</span> fruta <span class="keyword">in</span> frutas:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Me gusta la"</span>, fruta)<br><br>
+                            
+                            <span class="comment"># Salida:</span><br>
+                            <span class="comment"># Me gusta la manzana</span><br>
+                            <span class="comment"># Me gusta la banana</span><br>
+                            <span class="comment"># Me gusta la naranja</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo 2: Usar range() para contar</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Contar del 1 al 5</span><br>
+                            <span class="keyword">for</span> numero <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">6</span>):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Número:"</span>, numero)<br><br>
+                            
+                            <span class="comment"># Contar de 2 en 2</span><br>
+                            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="number">10</span>, <span class="number">2</span>):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i)  <span class="comment"># 0, 2, 4, 6, 8</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo 3: Recorrer un texto</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            palabra = <span class="string">"Python"</span><br><br>
+                            
+                            <span class="comment"># Recorrer cada letra</span><br>
+                            <span class="keyword">for</span> letra <span class="keyword">in</span> palabra:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Letra:"</span>, letra)<br><br>
+                            
+                            <span class="comment"># Salida:</span><br>
+                            <span class="comment"># Letra: P</span><br>
+                            <span class="comment"># Letra: y</span><br>
+                            <span class="comment"># Letra: t</span><br>
+                            <span class="comment"># Letra: h</span><br>
+                            <span class="comment"># Letra: o</span><br>
+                            <span class="comment"># Letra: n</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="resumen">
+                    <h4>📝 Reglas del bucle FOR:</h4>
+                    <p>1. Necesita una <strong>lista</strong> o algo que recorrer</p>
+                    <p>2. Usa la palabra <strong>in</strong> (en)</p>
+                    <p>3. Se repite <strong>una vez por cada elemento</strong></p>
+                    <p>4. Termina cuando <strong>acaba la lista</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 3: BUCLE WHILE -->
+        <div id="while" class="tab-content">
+            <div class="concept-card">
+                <h2>⏱️ Bucle WHILE - Mientras sea verdad</h2>
+                
+                <div class="analogia">
+                    <h4>💡 Analogía simple:</h4>
+                    <p>Un bucle WHILE es como <strong>esperar el autobús</strong>:</p>
+                    <p>"MIENTRAS no llegue el autobús, sigue esperando"</p>
+                </div>
+
+                <h3>Sintaxis básica</h3>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Estructura del bucle WHILE</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="keyword">while</span> <span class="variable">condicion</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Haz esto mientras la condición sea True</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Esto se repite"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># IMPORTANTE: Cambiar algo para que termine</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <h3>⚠️ ¡CUIDADO CON LOS BUCLES INFINITOS!</h3>
+                <div class="ejemplo-visual">
+                    <h4>❌ Ejemplo de bucle INFINITO (malo):</h4>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># ¡ESTO NUNCA TERMINA!</span><br>
+                            <span class="keyword">while</span> <span class="keyword">True</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Ayuda, estoy atrapado en un bucle"</span>)<br>
+                            <span class="comment"># Esto imprimirá para siempre 😱</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <h3>Ejemplos correctos</h3>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo 1: Contador con while</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Inicializamos el contador</span><br>
+                            contador = <span class="number">1</span><br><br>
+                            
+                            <span class="comment"># Mientras contador sea menor o igual a 5</span><br>
+                            <span class="keyword">while</span> contador <= <span class="number">5</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Contador:"</span>, contador)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Aumentamos el contador (IMPORTANTE)</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;contador = contador + <span class="number">1</span><br><br>
+                            
+                            <span class="function">print</span>(<span class="string">"¡Terminé de contar!"</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo 2: Validar contraseña</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            contraseña = <span class="string">""</span><br>
+                            intentos = <span class="number">0</span><br><br>
+                            
+                            <span class="comment"># Mientras no sea la contraseña correcta</span><br>
+                            <span class="keyword">while</span> contraseña != <span class="string">"python123"</span> <span class="keyword">and</span> intentos < <span class="number">3</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;contraseña = <span class="function">input</span>(<span class="string">"Ingresa la contraseña: "</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;intentos = intentos + <span class="number">1</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> contraseña == <span class="string">"python123"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Acceso concedido!"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> intentos == <span class="number">3</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Demasiados intentos. Bloqueado."</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo 3: Menú interactivo</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            opcion = <span class="string">""</span><br><br>
+                            
+                            <span class="keyword">while</span> opcion != <span class="string">"4"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"\n--- MENÚ ---"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"1. Ver saludo"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"2. Ver la hora"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"3. Contar hasta 3"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"4. Salir"</span>)<br><br>
+                            
+                            &nbsp;&nbsp;&nbsp;&nbsp;opcion = <span class="function">input</span>(<span class="string">"Elige una opción: "</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> opcion == <span class="string">"1"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Hola! ¿Cómo estás?"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> opcion == <span class="string">"2"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Es hora de aprender Python!"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> opcion == <span class="string">"3"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">4</span>):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(i)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="resumen">
+                    <h4>📝 Reglas del bucle WHILE:</h4>
+                    <p>1. Necesita una <strong>condición que pueda cambiar</strong></p>
+                    <p>2. Se repite <strong>mientras la condición sea True</strong></p>
+                    <p>3. <strong>SIEMPRE</strong> debe haber algo que cambie la condición</p>
+                    <p>4. Termina cuando la condición se hace <strong>False</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 4: CONTROL DE BUCLES -->
+        <div id="control" class="tab-content">
+            <div class="concept-card">
+                <h2>⚡ Control de Bucles - break, continue, pass</h2>
+                
+                <div class="analogia">
+                    <h4>💡 Piénsalo como un videojuego:</h4>
+                    <p><strong>break</strong> = "Salir del nivel" (termina el bucle)</p>
+                    <p><strong>continue</strong> = "Saltar este enemigo" (siguiente iteración)</p>
+                    <p><strong>pass</strong> = "Esperar un momento" (no hacer nada)</p>
+                </div>
+
+                <h3>1. break - Terminar el bucle</h3>
+                <p><strong>"ROMPE" el bucle y termínalo inmediatamente</strong></p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo: Buscar un número</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            numeros = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">11</span>]<br><br>
+                            
+                            <span class="keyword">for</span> num <span class="keyword">in</span> numeros:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> num == <span class="number">7</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Encontré el 7!"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>  <span class="comment"># Termina aquí</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Buscando..."</span>, num)<br><br>
+                            
+                            <span class="function">print</span>(<span class="string">"Búsqueda terminada"</span>)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <h3>2. continue - Saltar a la siguiente</h3>
+                <p><strong>"CONTINUA" con la siguiente iteración, saltando el resto</strong></p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo: Saltar números pares</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">11</span>):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:  <span class="comment"># Si es par</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">continue</span>  <span class="comment"># Saltar números pares</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Número impar:"</span>, i)<br><br>
+                            
+                            <span class="comment"># Salida: 1, 3, 5, 7, 9 (solo impares)</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <h3>3. pass - No hacer nada</h3>
+                <p><strong>"PASA" sin hacer nada, es un marcador de posición</strong></p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Ejemplo: Esqueleto de código</span>
+                        <button class="copy-btn">Copiar</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            <span class="comment"># Cuando no sabes qué poner aún</span><br>
+                            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">5</span>):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> i &lt; <span class="number">3</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">pass</span>  <span class="comment"># TODO: implementar luego</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Número grande:"</span>, i)<br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="ejemplo-visual">
+                    <h4>🎮 Ejemplo práctico: Juego simple</h4>
+                    <div class="code-block">
+                        <code>
+                            <span class="keyword">while</span> <span class="keyword">True</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;respuesta = <span class="function">input</span>(<span class="string">"¿Quieres seguir jugando? (s/n): "</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> respuesta == <span class="string">"n"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Gracias por jugar!"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">break</span>  <span class="comment"># Terminar juego</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> respuesta == <span class="string">"s"</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"¡Sigamos jugando!"</span>)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">continue</span>  <span class="comment"># Siguiente ronda</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">pass</span>  <span class="comment"># Respuesta inválida, preguntar otra vez</span><br>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="resumen">
+                    <h4>📝 Resumen de control:</h4>
+                    <p><strong>break</strong> = "¡Terminar ahora!" 🛑</p>
+                    <p><strong>continue</strong> = "Saltar esto, siguiente por favor" ⏭️</p>
+                    <p><strong>pass</strong> = "Aquí va algo, pero todavía no" 🤔</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 5: PRÁCTICA -->
+        <div id="practica" class="tab-content">
+            <div class="concept-card">
+                <h2>💪 ¡Es hora de practicar!</h2>
+                
+                <div class="analogia">
+                    <h4>🎯 Recuerda:</h4>
+                    <p>La mejor forma de aprender bucles es <strong>practicando mucho</strong>. ¡Empieza con estos ejercicios!</p>
+                </div>
+
+                <!-- EJERCICIOS -->
+                <div class="ejercicios">
+                    <h3>🧩 Ejercicios para practicar</h3>
+                    
+                    <div class="ejercicio">
+                        <h4>Ejercicio 1: Contar vocales</h4>
+                        <p>Escribe un programa que cuente cuántas vocales tiene una palabra.</p>
+                        <button class="solucion-btn" onclick="mostrarSolucion(1)">Ver solución</button>
+                        <div class="solucion" id="solucion1">
+                            <code>
+                                palabra = <span class="string">"programacion"</span><br>
+                                vocales = <span class="number">0</span><br><br>
+                                
+                                <span class="keyword">for</span> letra <span class="keyword">in</span> palabra:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> letra <span class="keyword">in</span> <span class="string">"aeiou"</span>:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vocales = vocales + <span class="number">1</span><br><br>
+                                
+                                <span class="function">print</span>(<span class="string">f"La palabra '{palabra}' tiene {vocales} vocales"</span>)<br>
+                            </code>
+                        </div>
+                    </div>
+                    
+                    <div class="ejercicio">
+                        <h4>Ejercicio 2: Tabla de multiplicar</h4>
+                        <p>Pide un número al usuario y muestra su tabla de multiplicar del 1 al 10.</p>
+                        <button class="solucion-btn" onclick="mostrarSolucion(2)">Ver solución</button>
+                        <div class="solucion" id="solucion2">
+                            <code>
+                                numero = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"¿Qué tabla quieres ver? "</span>))<br><br>
+                                
+                                <span class="function">print</span>(<span class="string">f"\nTabla del {numero}:"</span>)<br>
+                                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">11</span>):<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;resultado = numero * i<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"{numero} x {i} = {resultado}"</span>)<br>
+                            </code>
+                        </div>
+                    </div>
+                    
+                    <div class="ejercicio">
+                        <h4>Ejercicio 3: Adivina el número</h4>
+                        <p>Crea un juego donde el usuario deba adivinar un número secreto.</p>
+                        <button class="solucion-btn" onclick="mostrarSolucion(3)">Ver solución</button>
+                        <div class="solucion" id="solucion3">
+                            <code>
+                                <span class="keyword">import</span> random<br><br>
+                                
+                                secreto = random.randint(<span class="number">1</span>, <span class="number">10</span>)<br>
+                                intentos = <span class="number">0</span><br>
+                                adivinado = <span class="keyword">False</span><br><br>
+                                
+                                <span class="keyword">while</span> <span class="keyword">not</span> adivinado <span class="keyword">and</span> intentos &lt; <span class="number">5</span>:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;intento = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Adivina el número (1-10): "</span>))<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;intentos += <span class="number">1</span><br><br>
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> intento == secreto:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"¡Correcto! Lo lograste en {intentos} intentos"</span>)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adivinado = <span class="keyword">True</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> intento &lt; secreto:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Más alto"</span>)<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Más bajo"</span>)<br><br>
+                                
+                                <span class="keyword">if</span> <span class="keyword">not</span> adivinado:<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"¡Se acabaron los intentos! El número era {secreto}"</span>)<br>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIMULADOR -->
+                <div class="simulador">
+                    <h3>💻 Simulador de bucles</h3>
+                    <p>Prueba diferentes tipos de bucles aquí mismo:</p>
+                    
+                    <div class="sim-controls">
+                        <select id="sim-tipo" class="sim-select">
+                            <option value="for-simple">FOR simple</option>
+                            <option value="for-range">FOR con range</option>
+                            <option value="while-contador">WHILE contador</option>
+                            <option value="while-input">WHILE con input</option>
+                        </select>
+                        
+                        <input type="text" id="sim-entrada" class="sim-input" placeholder="Dato de entrada..." value="5">
+                        
+                        <button onclick="ejecutarSimulacion()" class="sim-btn">Ejecutar bucle</button>
+                    </div>
+                    
+                    <div class="sim-output" id="sim-salida">
+                        El resultado aparecerá aquí...
+                    </div>
+                </div>
+
+                <!-- RESUMEN FINAL -->
+                <div class="resumen">
+                    <h4>🎯 ¿Qué has aprendido?</h4>
+                    <p><strong>✅ Bucle FOR</strong> = Para recorrer listas, sabiendo cuántas veces</p>
+                    <p><strong>✅ Bucle WHILE</strong> = Para repetir mientras sea verdad</p>
+                    <p><strong>✅ break</strong> = Terminar el bucle</p>
+                    <p><strong>✅ continue</strong> = Saltar a la siguiente</p>
+                    <p><strong>✅ pass</strong> = No hacer nada (placeholder)</p>
+                    <br>
+                    <p><strong>💡 Consejo final:</strong> ¡La práctica hace al maestro! Sigue escribiendo código.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Bucles en Python - Tutorial para principiantes</p>
+            <p style="margin-top: 10px; color: var(--accent3);">Recuerda: ¡Cada programador comenzó con un bucle! 🐍</p>
+        </footer>
+    </div>
+
+    <script>
+        // Navegación por pestañas
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Quitar active de todos
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Activar el clickeado
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Botones copiar código
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const codeBlock = btn.closest('.code-container').querySelector('.code-block');
+                const code = codeBlock.innerText;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Copiado!';
+                    btn.style.background = '#2ecc71';
+                    btn.style.borderColor = '#27ae60';
+                    btn.style.color = 'white';
+                    
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.style.borderColor = '';
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+
+        // Mostrar soluciones
+        function mostrarSolucion(numero) {
+            const solucion = document.getElementById(`solucion${numero}`);
+            const btn = event.target;
+            
+            if (solucion.style.display === 'block') {
+                solucion.style.display = 'none';
+                btn.textContent = 'Ver solución';
+            } else {
+                solucion.style.display = 'block';
+                btn.textContent = 'Ocultar solución';
+            }
+        }
+
+        // Simulador de bucles
+        function ejecutarSimulacion() {
+            const tipo = document.getElementById('sim-tipo').value;
+            const entrada = document.getElementById('sim-entrada').value;
+            const salida = document.getElementById('sim-salida');
+            
+            let resultado = '';
+            
+            switch(tipo) {
+                case 'for-simple':
+                    resultado = 'FOR simple (lista de frutas):\n\n';
+                    const frutas = ["manzana", "banana", "naranja", "uva", "mango"];
+                    for (let fruta of frutas) {
+                        resultado += `Me gusta la ${fruta}\n`;
+                    }
+                    break;
+                    
+                case 'for-range':
+                    const limite = parseInt(entrada) || 5;
+                    resultado = `FOR contando hasta ${limite}:\n\n`;
+                    for (let i = 1; i <= limite; i++) {
+                        resultado += `Número: ${i}`;
+                        if (i === limite) resultado += ' ⭐';
+                        resultado += '\n';
+                    }
+                    break;
+                    
+                case 'while-contador':
+                    const max = parseInt(entrada) || 3;
+                    resultado = `WHILE contando hasta ${max}:\n\n`;
+                    let contador = 1;
+                    while (contador <= max) {
+                        resultado += `Contador: ${contador}\n`;
+                        contador++;
+                    }
+                    resultado += '✅ ¡Terminé de contar!';
+                    break;
+                    
+                case 'while-input':
+                    resultado = 'WHILE esperando "salir":\n\n';
+                    if (entrada.toLowerCase() === 'salir') {
+                        resultado += 'Escribiste "salir" inmediatamente\n';
+                        resultado += '✅ Bucle terminado';
+                    } else {
+                        resultado += `Escribiste: "${entrada}"\n`;
+                        resultado += '❌ El bucle continuaría preguntando...\n';
+                        resultado += '(En un programa real, esto seguiría hasta escribir "salir")';
+                    }
+                    break;
+            }
+            
+            salida.textContent = resultado;
+        }
+
+        // Inicializar simulador
+        document.addEventListener('DOMContentLoaded', () => {
+            ejecutarSimulacion();
+            
+            // Permitir Enter en el input
+            document.getElementById('sim-entrada').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    ejecutarSimulacion();
+                }
+            });
+            
+            // Cambiar placeholder según selección
+            document.getElementById('sim-tipo').addEventListener('change', function() {
+                const tipos = {
+                    'for-simple': 'No necesita entrada',
+                    'for-range': 'Límite (ej: 5)',
+                    'while-contador': 'Hasta qué número (ej: 10)',
+                    'while-input': 'Escribe algo (prueba "salir")'
+                };
+                document.getElementById('sim-entrada').placeholder = tipos[this.value];
+                
+                // Establecer valor por defecto
+                const valores = {
+                    'for-simple': '5',
+                    'for-range': '5',
+                    'while-contador': '3',
+                    'while-input': 'hola'
+                };
+                document.getElementById('sim-entrada').value = valores[this.value];
+            });
+        });
+    </script>
+</body>
+</html>

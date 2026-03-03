@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas del Curso Python</title>
+    <link rel="stylesheet" href="../style/style_temas.css">
+     <link rel="icon" type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+    <div class="circles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Temario del Curso</h1>
+            <p>Domina Python desde cero hasta avanzado</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="topics-grid">
+            <a href="../contenido/variables.html" class="topic-card">
+                <div class="topic-number">01</div>
+                <div class="topic-content">
+                    <div class="topic-title">Declaración de variables</div>
+                    <div class="topic-description">Aprende a crear y gestionar variables en Python</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+
+            <a href="../contenido/tipo_datos.html" class="topic-card">
+                <div class="topic-number">02</div>
+                <div class="topic-content">
+                    <div class="topic-title">Tipo de Datos</div>
+                    <div class="topic-description">Explora strings, números, booleanos y más</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+
+            <a href="../contenido/operadores.html" class="topic-card">
+                <div class="topic-number">03</div>
+                <div class="topic-content">
+                    <div class="topic-title">Tipo de Operadores</div>
+                    <div class="topic-description">Aritméticos, lógicos, relacionales y más</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+
+            <a href="../contenido/entrada_datos.html" class="topic-card">
+                <div class="topic-number">04</div>
+                <div class="topic-content">
+                    <div class="topic-title">Entrada de datos por teclado</div>
+                    <div class="topic-description">Interactúa con el usuario usando input()</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+
+            <a href="../contenido/sentencias_control.html" class="topic-card">
+                <div class="topic-number">05</div>
+                <div class="topic-content">
+                    <div class="topic-title">Sentencias de control</div>
+                    <div class="topic-description">if, elif, else para decisiones lógicas</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+
+            <a href="../contenido/bucles.html" class="topic-card">
+                <div class="topic-number">06</div>
+                <div class="topic-content">
+                    <div class="topic-title">Bucles</div>
+                    <div class="topic-description">for y while para iterar y repetir código</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+
+            <a href="../contenido/funciones.html" class="topic-card">
+                <div class="topic-number">07</div>
+                <div class="topic-content">
+                    <div class="topic-title">Funciones</div>
+                    <div class="topic-description">Crea código reutilizable y modular</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Simular progreso del curso
+        setTimeout(() => {
+            document.getElementById('progressFill').style.width = '28%';
+        }, 500);
+
+        // Efecto hover mejorado
+        const cards = document.querySelectorAll('.topic-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+    </script>
+</body>
+</html>

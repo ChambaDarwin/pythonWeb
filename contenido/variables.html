@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables en Python - Teoría Sencilla</title>
+         <link rel="icon" type="image/x-icon" href="../image/python.png">
+    <link rel="stylesheet" href="../style/style_variable.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="python-icon">📦</div>
+            <h1>Variables en Python - Teoría Sencilla</h1>
+            <p class="subtitle">Aprende qué son las variables, cómo crearlas y usarlas de manera fácil y práctica</p>
+        </header>
+
+        <!-- CONCEPTO PRINCIPAL -->
+        <div class="concepto-principal">
+            <div class="caja-concepto">
+                <div class="etiqueta">CAJA</div>
+                <div class="contenido">42</div>
+            </div>
+            
+            <div class="concepto-texto">
+                <h2>¿Qué es una variable?</h2>
+                <p>Una variable es como una <strong>CAJA</strong> donde guardas cosas. Tiene:</p>
+                <ul style="padding-left: 20px; margin: 15px 0;">
+                    <li><strong>📌 NOMBRE</strong> (para identificarla)</li>
+                    <li><strong>🎁 CONTENIDO</strong> (lo que guarda dentro)</li>
+                    <li><strong>🏷️ ETIQUETA</strong> (qué tipo de cosa es)</li>
+                </ul>
+                <p>En Python, creas una variable simplemente dándole un nombre y poniendo algo dentro.</p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: DECLARAR VARIABLES -->
+        <section class="section">
+            <h2>1️⃣ ¿Cómo declarar una variable?</h2>
+            
+            <div class="analogia">
+                <h4>💡 Piénsalo así:</h4>
+                <p>Declarar una variable es como <strong>etiquetar una caja vacía</strong> y luego ponerle algo dentro.</p>
+                <p>En Python es súper fácil: <strong>nombre = valor</strong></p>
+            </div>
+
+            <!-- VISUALIZACIÓN -->
+            <div class="variable-visual">
+                <div class="variable-box">
+                    <div class="variable-nombre">edad</div>
+                    <div class="variable-valor">25</div>
+                    <div class="variable-explicacion">← Nombre de la variable</div>
+                </div>
+                
+                <div class="arrow">=</div>
+                
+                <div class="variable-box">
+                    <div class="variable-nombre">Valor</div>
+                    <div class="variable-valor">25</div>
+                    <div class="variable-explicacion">← Lo que guarda</div>
+                </div>
+            </div>
+
+            <h3>Sintaxis básica</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Forma de crear variables</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Así se crea una variable en Python:</span><br>
+                        <span class="variable">nombre</span> <span class="operator">=</span> <span class="string">"Ana"</span><br>
+                        <span class="variable">edad</span> <span class="operator">=</span> <span class="number">25</span><br>
+                        <span class="variable">altura</span> <span class="operator">=</span> <span class="number">1.65</span><br>
+                        <span class="variable">es_estudiante</span> <span class="operator">=</span> <span class="keyword">True</span><br><br>
+                        
+                        <span class="comment"># Python entiende automáticamente el tipo</span><br>
+                        <span class="comment"># No necesitas decir "esto es texto" o "esto es número"</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>El símbolo "=" no es igualdad matemática</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>El = asigna, no compara</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># En programación, = significa "GUARDA ESTO"</span><br>
+                        <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span>   <span class="comment"># Guarda 10 en la variable x</span><br>
+                        <span class="variable">x</span> <span class="operator">=</span> <span class="number">20</span>   <span class="comment"># Ahora guarda 20 (cambia el valor)</span><br><br>
+                        
+                        <span class="comment"># Para comparar (ver si son iguales) se usa ==</span><br>
+                        <span class="keyword">if</span> <span class="variable">x</span> <span class="operator">==</span> <span class="number">20</span>:   <span class="comment"># ¿x es igual a 20?</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Sí, x vale 20"</span>)<br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: REGLAS PARA NOMBRAR VARIABLES -->
+        <section class="section">
+            <h2>2️⃣ Reglas para nombrar variables</h2>
+            
+            <div class="analogia">
+                <h4>📝 ¡IMPORTANTE!</h4>
+                <p>Los nombres de variables tienen reglas, como los nombres de personas:</p>
+                <p><strong>✅ Pueden tener:</strong> letras, números (pero no empezar con número), guión bajo _</p>
+                <p><strong>❌ NO pueden tener:</strong> espacios, símbolos especiales (excepto _), palabras reservadas</p>
+            </div>
+
+            <h3>Reglas de nomenclatura</h3>
+            <div class="reglas-grid">
+                <div class="regla-item regla-correcta">
+                    <h4>✅ CORRECTO</h4>
+                    <p><code>edad = 25</code></p>
+                    <p><code>nombre_usuario = "Ana"</code></p>
+                    <p><code>precio_total = 99.99</code></p>
+                    <p><code>_temporal = "temp"</code></p>
+                </div>
+                
+                <div class="regla-item regla-incorrecta">
+                    <h4>❌ INCORRECTO</h4>
+                    <p><code>1nombre = "Ana"</code> (empieza con número)</p>
+                    <p><code>nombre usuario = "Ana"</code> (tiene espacio)</p>
+                    <p><code>precio-total = 99.99</code> (tiene guión)</p>
+                    <p><code>if = 10</code> (palabra reservada)</p>
+                </div>
+            </div>
+
+            <h3>Convenciones (buenas prácticas)</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Estilos recomendados</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># snake_case (recomendado en Python)</span><br>
+                        <span class="variable">nombre_completo</span> <span class="operator">=</span> <span class="string">"Ana García"</span><br>
+                        <span class="variable">edad_usuario</span> <span class="operator">=</span> <span class="number">25</span><br>
+                        <span class="variable">es_estudiante_activo</span> <span class="operator">=</span> <span class="keyword">True</span><br><br>
+                        
+                        <span class="comment"># Nombres descriptivos (dicen qué guardan)</span><br>
+                        <span class="variable">precio</span> <span class="operator">=</span> <span class="number">19.99</span>    <span class="comment"># BIEN: dice qué es</span><br>
+                        <span class="variable">x</span> <span class="operator">=</span> <span class="number">19.99</span>           <span class="comment"># MAL: no dice nada</span><br><br>
+                        
+                        <span class="comment"># Constantes (valores que no cambian, en MAYÚSCULAS)</span><br>
+                        <span class="variable">PI</span> <span class="operator">=</span> <span class="number">3.1416</span><br>
+                        <span class="variable">IVA</span> <span class="operator">=</span> <span class="number">0.12</span><br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: TIPOS DE VARIABLES -->
+        <section class="section">
+            <h2>3️⃣ Tipos de variables más comunes</h2>
+            
+            <div class="analogia">
+                <h4>🎁 Tipos de cajas:</h4>
+                <p>Así como hay cajas para libros, cajas para ropa y cajas para comida, las variables también tienen tipos.</p>
+                <p><strong>Python detecta automáticamente</strong> el tipo según lo que guardes.</p>
+            </div>
+
+            <div class="tipos-grid">
+                <div class="tipo-item" style="border-color: #e74c3c;">
+                    <h4>Texto (str)</h4>
+                    <p>Para palabras y frases</p>
+                    <div class="ejemplo">"Hola", 'Python'</div>
+                </div>
+                
+                <div class="tipo-item" style="border-color: #3498db;">
+                    <h4>Enteros (int)</h4>
+                    <p>Para números sin decimal</p>
+                    <div class="ejemplo">25, -10, 1000</div>
+                </div>
+                
+                <div class="tipo-item" style="border-color: #2ecc71;">
+                    <h4>Decimales (float)</h4>
+                    <p>Para números con punto</p>
+                    <div class="ejemplo">3.14, -2.5, 99.99</div>
+                </div>
+                
+                <div class="tipo-item" style="border-color: #9b59b6;">
+                    <h4>Booleanos (bool)</h4>
+                    <p>Para verdadero/falso</p>
+                    <div class="ejemplo">True, False</div>
+                </div>
+            </div>
+
+            <h3>Ejemplos de cada tipo</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Variables de diferentes tipos</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># 1. Texto (string) - se usa con comillas</span><br>
+                        <span class="variable">nombre</span> <span class="operator">=</span> <span class="string">"Carlos"</span><br>
+                        <span class="variable">mensaje</span> <span class="operator">=</span> <span class="string">'Hola mundo'</span><br>
+                        <span class="variable">direccion</span> <span class="operator">=</span> <span class="string">"""Calle Principal
+                        Número 123"""</span>  <span class="comment"># Texto de varias líneas</span><br><br>
+                        
+                        <span class="comment"># 2. Números enteros (int)</span><br>
+                        <span class="variable">edad</span> <span class="operator">=</span> <span class="number">30</span><br>
+                        <span class="variable">cantidad_productos</span> <span class="operator">=</span> <span class="number">15</span><br>
+                        <span class="variable">temperatura</span> <span class="operator">=</span> <span class="operator">-</span><span class="number">5</span>  <span class="comment"># Puede ser negativo</span><br><br>
+                        
+                        <span class="comment"># 3. Números decimales (float)</span><br>
+                        <span class="variable">precio</span> <span class="operator">=</span> <span class="number">19.99</span><br>
+                        <span class="variable">promedio</span> <span class="operator">=</span> <span class="number">8.75</span><br>
+                        <span class="variable">pi</span> <span class="operator">=</span> <span class="number">3.1415926535</span><br><br>
+                        
+                        <span class="comment"># 4. Booleanos (verdadero/falso)</span><br>
+                        <span class="variable">es_mayor</span> <span class="operator">=</span> <span class="keyword">True</span><br>
+                        <span class="variable">tiene_licencia</span> <span class="operator">=</span> <span class="keyword">False</span><br>
+                        <span class="variable">esta_activo</span> <span class="operator">=</span> <span class="keyword">True</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>Verificar el tipo de una variable</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Función type()</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="variable">nombre</span> <span class="operator">=</span> <span class="string">"Ana"</span><br>
+                        <span class="variable">edad</span> <span class="operator">=</span> <span class="number">25</span><br>
+                        <span class="variable">altura</span> <span class="operator">=</span> <span class="number">1.65</span><br><br>
+                        
+                        <span class="function">print</span>(<span class="function">type</span>(<span class="variable">nombre</span>))   <span class="comment"># <class 'str'></span><br>
+                        <span class="function">print</span>(<span class="function">type</span>(<span class="variable">edad</span>))     <span class="comment"># <class 'int'></span><br>
+                        <span class="function">print</span>(<span class="function">type</span>(<span class="variable">altura</span>))   <span class="comment"># <class 'float'></span><br><br>
+                        
+                        <span class="comment"># Python te dice automáticamente el tipo</span><br>
+                        <span class="comment"># ¡No necesitas declararlo!</span><br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: OPERACIONES CON VARIABLES -->
+        <section class="section">
+            <h2>4️⃣ Operaciones con variables</h2>
+            
+            <div class="analogia">
+                <h4>➕ Operaciones matemáticas:</h4>
+                <p>Puedes hacer operaciones con variables como haces con números normales.</p>
+                <p>¡Y también puedes modificar su contenido después!</p>
+            </div>
+
+            <h3>Modificar variables</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Cambiar el valor de una variable</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># 1. Crear una variable</span><br>
+                        <span class="variable">contador</span> <span class="operator">=</span> <span class="number">0</span><br>
+                        <span class="function">print</span>(<span class="string">"Contador:"</span>, <span class="variable">contador</span>)  <span class="comment"># 0</span><br><br>
+                        
+                        <span class="comment"># 2. Cambiar su valor</span><br>
+                        <span class="variable">contador</span> <span class="operator">=</span> <span class="variable">contador</span> <span class="operator">+</span> <span class="number">1</span>  <span class="comment"># Ahora vale 1</span><br>
+                        <span class="function">print</span>(<span class="string">"Contador:"</span>, <span class="variable">contador</span>)  <span class="comment"># 1</span><br><br>
+                        
+                        <span class="comment"># 3. Forma abreviada para sumar</span><br>
+                        <span class="variable">contador</span> <span class="operator">+=</span> <span class="number">1</span>  <span class="comment"># Igual que: contador = contador + 1</span><br>
+                        <span class="function">print</span>(<span class="string">"Contador:"</span>, <span class="variable">contador</span>)  <span class="comment"># 2</span><br><br>
+                        
+                        <span class="comment"># También funciona con otros operadores</span><br>
+                        <span class="variable">precio</span> <span class="operator">=</span> <span class="number">100</span><br>
+                        <span class="variable">precio</span> <span class="operator">*=</span> <span class="number">1.12</span>  <span class="comment"># Aumenta 12% (IVA)</span><br>
+                        <span class="function">print</span>(<span class="string">"Precio con IVA:"</span>, <span class="variable">precio</span>)  <span class="comment"># 112.0</span><br>
+                    </code>
+                </div>
+            </div>
+
+            <h3>Operaciones entre variables</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>Usar variables juntas</span>
+                    <button class="copy-btn">Copiar código</button>
+                </div>
+                <div class="code-block">
+                    <code>
+                        <span class="comment"># Crear variables</span><br>
+                        <span class="variable">precio_producto</span> <span class="operator">=</span> <span class="number">25.50</span><br>
+                        <span class="variable">cantidad</span> <span class="operator">=</span> <span class="number">3</span><br>
+                        <span class="variable">descuento</span> <span class="operator">=</span> <span class="number">5.00</span><br><br>
+                        
+                        <span class="comment"># Calcular total</span><br>
+                        <span class="variable">subtotal</span> <span class="operator">=</span> <span class="variable">precio_producto</span> <span class="operator">*</span> <span class="variable">cantidad</span><br>
+                        <span class="variable">total</span> <span class="operator">=</span> <span class="variable">subtotal</span> <span class="operator">-</span> <span class="variable">descuento</span><br><br>
+                        
+                        <span class="function">print</span>(<span class="string">"Subtotal:"</span>, <span class="variable">subtotal</span>)  <span class="comment"># 76.5</span><br>
+                        <span class="function">print</span>(<span class="string">"Descuento:"</span>, <span class="variable">descuento</span>)  <span class="comment"># 5.0</span><br>
+                        <span class="function">print</span>(<span class="string">"Total a pagar:"</span>, <span class="variable">total</span>)   <span class="comment"># 71.5</span><br><br>
+                        
+                        <span class="comment"># Concatenar texto (unir variables de texto)</span><br>
+                        <span class="variable">nombre</span> <span class="operator">=</span> <span class="string">"Ana"</span><br>
+                        <span class="variable">apellido</span> <span class="operator">=</span> <span class="string">"García"</span><br>
+                        <span class="variable">nombre_completo</span> <span class="operator">=</span> <span class="variable">nombre</span> <span class="operator">+</span> <span class="string">" "</span> <span class="operator">+</span> <span class="variable">apellido</span><br>
+                        <span class="function">print</span>(<span class="variable">nombre_completo</span>)  <span class="comment"># Ana García</span><br>
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- EJERCICIOS PRÁCTICOS -->
+        <section class="ejercicios">
+            <h2>💪 Ejercicios para practicar</h2>
+            <p>Resuelve estos ejercicios para afianzar lo aprendido:</p>
+            
+            <div class="ejercicio">
+                <h4>Ejercicio 1: Calculadora simple</h4>
+                <p class="instruccion">Crea tres variables: <code>numero1 = 15</code>, <code>numero2 = 3</code>. Luego calcula y muestra:</p>
+                <ol style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>La suma de ambos números</li>
+                    <li>La resta (numero1 - numero2)</li>
+                    <li>La multiplicación</li>
+                    <li>La división</li>
+                </ol>
+                <button class="verificar-btn" onclick="verificarEjercicio(1)">Ver solución</button>
+                <div class="resultado" id="resultado1"></div>
+            </div>
+            
+            <div class="ejercicio">
+                <h4>Ejercicio 2: Perfil de usuario</h4>
+                <p class="instruccion">Crea variables para guardar esta información:</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>Nombre: "Carlos"</li>
+                    <li>Edad: 28</li>
+                    <li>Altura: 1.75 metros</li>
+                    <li>Es estudiante: True</li>
+                    <li>Ciudad: "Quito"</li>
+                </ul>
+                <p>Luego crea un mensaje que diga: "Carlos tiene 28 años, mide 1.75m y vive en Quito"</p>
+                <button class="verificar-btn" onclick="verificarEjercicio(2)">Ver solución</button>
+                <div class="resultado" id="resultado2"></div>
+            </div>
+            
+            <div class="ejercicio">
+                <h4>Ejercicio 3: Convertir temperaturas</h4>
+                <p class="instruccion">Crea una variable <code>celsius = 30</code> y conviértela a Fahrenheit usando la fórmula:</p>
+                <p style="text-align: center; margin: 10px 0;"><strong>Fahrenheit = (Celsius × 9/5) + 32</strong></p>
+                <p>Muestra el resultado con el mensaje: "30°C equivalen a XX°F"</p>
+                <button class="verificar-btn" onclick="verificarEjercicio(3)">Ver solución</button>
+                <div class="resultado" id="resultado3"></div>
+            </div>
+        </section>
+
+        <!-- SIMULADOR INTERACTIVO -->
+        <section class="simulador">
+            <h2>💻 Simulador de Variables</h2>
+            <p>Prueba a crear y modificar variables aquí mismo:</p>
+            
+            <div class="sim-controls">
+                <input type="text" id="var-nombre" class="sim-input" placeholder="Nombre de variable (ej: edad)" value="edad">
+                <input type="text" id="var-valor" class="sim-input" placeholder="Valor (ej: 25)" value="25">
+                <button onclick="crearVariable()" class="sim-btn">Crear Variable</button>
+            </div>
+            
+            <div class="sim-output" id="var-output">
+                Las variables creadas aparecerán aquí...
+            </div>
+        </section>
+
+        <!-- RESUMEN FINAL -->
+        <section class="resumen">
+            <h3>🎯 Resumen: Lo más importante sobre variables</h3>
+            
+            <div class="resumen-lista">
+                <div class="resumen-item">
+                    <h4>📌 Para crear una variable</h4>
+                    <p><code>nombre = valor</code></p>
+                    <p>Ejemplo: <code>edad = 25</code></p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4>📌 Nombres válidos</h4>
+                    <p>Usa letras, números y _</p>
+                    <p>Empieza con letra o _</p>
+                    <p>Ejemplo: <code>nombre_usuario</code></p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4>📌 Tipos principales</h4>
+                    <p><strong>str</strong>: texto</p>
+                    <p><strong>int</strong>: enteros</p>
+                    <p><strong>float</strong>: decimales</p>
+                    <p><strong>bool</strong>: True/False</p>
+                </div>
+                
+                <div class="resumen-item">
+                    <h4>📌 Buenas prácticas</h4>
+                    <p>Nombres descriptivos</p>
+                    <p>Usa snake_case</p>
+                    <p>Las constantes en MAYÚSCULAS</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                <h4>💡 Recuerda siempre:</h4>
+                <p><strong>1.</strong> Python detecta automáticamente el tipo</p>
+                <p><strong>2.</strong> Puedes cambiar el valor después</p>
+                <p><strong>3.</strong> El <code>=</code> asigna, <code>==</code> compara</p>
+                <p><strong>4.</strong> ¡Nombra bien tus variables!</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Variables en Python - Tutorial para principiantes</p>
+            <p style="margin-top: 10px; color: var(--success);">¡Las variables son la base de la programación! 📦</p>
+        </footer>
+    </div>
+
+    <script>
+        // Función para copiar código
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const codeBlock = this.closest('.code-container').querySelector('.code-block');
+                const code = codeBlock.innerText;
+                
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = '✓ Copiado!';
+                    this.style.background = '#27ae60';
+                    this.style.borderColor = '#2ecc71';
+                    this.style.color = 'white';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                        this.style.borderColor = '';
+                        this.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+
+        // Variables del simulador
+        let variablesCreadas = {};
+        let outputElement = document.getElementById('var-output');
+
+        // Función para crear variables en el simulador
+        function crearVariable() {
+            const nombre = document.getElementById('var-nombre').value.trim();
+            const valor = document.getElementById('var-valor').value.trim();
+            
+            if (!nombre) {
+                outputElement.textContent = "❌ Error: Debes escribir un nombre para la variable";
+                return;
+            }
+            
+            // Validar nombre de variable
+            if (!/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(nombre)) {
+                outputElement.textContent = "❌ Error: Nombre de variable inválido\n";
+                outputElement.textContent += "Debe empezar con letra o _ y contener solo letras, números y _";
+                return;
+            }
+            
+            // Intentar determinar el tipo
+            let valorFinal;
+            let tipo;
+            
+            if (valor === 'True' || valor === 'False') {
+                valorFinal = valor === 'True';
+                tipo = 'bool';
+            } else if (!isNaN(valor) && valor !== '') {
+                if (valor.includes('.')) {
+                    valorFinal = parseFloat(valor);
+                    tipo = 'float';
+                } else {
+                    valorFinal = parseInt(valor);
+                    tipo = 'int';
+                }
+            } else {
+                // Si está entre comillas, quitarlas
+                if ((valor.startsWith('"') && valor.endsWith('"')) || 
+                    (valor.startsWith("'") && valor.endsWith("'"))) {
+                    valorFinal = valor.slice(1, -1);
+                } else {
+                    valorFinal = valor;
+                }
+                tipo = 'str';
+            }
+            
+            // Guardar la variable
+            variablesCreadas[nombre] = { valor: valorFinal, tipo: tipo };
+            
+            // Mostrar todas las variables
+            actualizarOutput();
+        }
+
+        // Actualizar el output del simulador
+        function actualizarOutput() {
+            let resultado = "📦 VARIABLES CREADAS:\n";
+            resultado += "═".repeat(30) + "\n\n";
+            
+            if (Object.keys(variablesCreadas).length === 0) {
+                resultado += "Aún no hay variables creadas.\n";
+                resultado += "Escribe un nombre y valor arriba y haz clic en 'Crear Variable'";
+            } else {
+                for (const [nombre, info] of Object.entries(variablesCreadas)) {
+                    resultado += `🔸 ${nombre} = ${info.valor}  (tipo: ${info.tipo})\n`;
+                }
+                
+                resultado += "\n══════════════════════════════════════\n\n";
+                resultado += "💡 Puedes usar estas variables:\n";
+                resultado += "Ejemplo: print(edad) mostraría " + variablesCreadas.edad?.valor + "\n";
+            }
+            
+            outputElement.textContent = resultado;
+        }
+
+        // Verificar ejercicios
+        function verificarEjercicio(numero) {
+            const resultado = document.getElementById(`resultado${numero}`);
+            
+            let solucion = '';
+            
+            switch(numero) {
+                case 1:
+                    solucion = `# Ejercicio 1 - Calculadora simple
+numero1 = 15
+numero2 = 3
+
+suma = numero1 + numero2
+resta = numero1 - numero2
+multiplicacion = numero1 * numero2
+division = numero1 / numero2
+
+print("Suma:", suma)          # 18
+print("Resta:", resta)        # 12
+print("Multiplicación:", multiplicacion)  # 45
+print("División:", division)  # 5.0`;
+                    break;
+                    
+                case 2:
+                    solucion = `# Ejercicio 2 - Perfil de usuario
+nombre = "Carlos"
+edad = 28
+altura = 1.75
+es_estudiante = True
+ciudad = "Quito"
+
+mensaje = nombre + " tiene " + str(edad) + " años, mide " + str(altura) + "m y vive en " + ciudad
+print(mensaje)
+
+# También se puede usar f-strings (más moderno):
+print(f"{nombre} tiene {edad} años, mide {altura}m y vive en {ciudad}")`;
+                    break;
+                    
+                case 3:
+                    solucion = `# Ejercicio 3 - Convertir temperaturas
+celsius = 30
+fahrenheit = (celsius * 9/5) + 32
+
+print(f"{celsius}°C equivalen a {fahrenheit:.1f}°F")
+# Resultado: 30°C equivalen a 86.0°F
+
+# También se puede redondear:
+print(f"{celsius}°C equivalen a {round(fahrenheit, 1)}°F")`;
+                    break;
+            }
+            
+            resultado.innerHTML = `<pre><code>${solucion}</code></pre>`;
+            resultado.style.display = 'block';
+            resultado.className = 'resultado resultado-correcto';
+        }
+
+        // Inicializar simulador
+        document.addEventListener('DOMContentLoaded', () => {
+            actualizarOutput();
+            
+            // Permitir Enter en los inputs
+            document.getElementById('var-nombre').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    crearVariable();
+                }
+            });
+            
+            document.getElementById('var-valor').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    crearVariable();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
