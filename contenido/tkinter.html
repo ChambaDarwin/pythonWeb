@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentación Tkinter · Apps Python</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style/style_tkinter.css">
+  <link rel="icon" type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="badge">📚 DOCUMENTACIÓN PYTHON · TKINTER</div>
+    <p>Pasa el cursor sobre cada línea de código para ver su explicación y analogía del mundo real.</p>
+  </div>
+</div>
+
+<div class="tabs-outer">
+  <nav>
+    <button class="on"  onclick="tab('a1',this)">App 1 · Número Positivo/Negativo</button>
+    <button            onclick="tab('a2',this)">App 2 · Saludo Personalizado</button>
+    <button            onclick="tab('df',this)">Comparación</button>
+    <button            onclick="tab('kc',this)">Conceptos Clave</button>
+  </nav>
+
+  <!-- ═══════════════════ APP 1 ═══════════════════ -->
+  <div id="a1" class="panel on">
+    <div class="sh">
+      <h2>App 1 · <em>Detector de Número</em></h2>
+      <p>Lee un número, detecta si es positivo, negativo o cero. Pasa el cursor sobre cada línea para ver la documentación.</p>
+    </div>
+
+    <div class="preview">
+      <div class="win">
+        <div class="wbar"><div class="wd r"></div><div class="wd y"></div><div class="wd g"></div><span class="wtitle">App saludo personalizado</span></div>
+        <div class="wbody">
+          <div class="wlbl">Ingrese su nombre</div>
+          <div class="wentry"></div>
+          <div class="wbtn">Saludar</div>
+          <div class="wres">Es un numero positivo</div>
+        </div>
+      </div>
+      <div class="pinfo">
+        <h3>¿Qué hace esta app?</h3>
+        <p>El usuario escribe un número, presiona el botón y la app decide si es positivo, negativo o cero. Si el campo está vacío, muestra un mensaje de error.</p>
+        <span class="tag">tkinter</span><span class="tag">if / elif / else</span><span class="tag">int()</span><span class="tag">Label.config()</span>
+      </div>
+    </div>
+
+    <div class="code-wrap">
+      <div class="code-hdr"><span>PYTHON · app1_numero.py</span><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+      <div class="toggle-hint">💡 Pasa el cursor sobre cada línea para ver la explicación</div>
+      <div class="lines">
+
+        <!-- L1 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">1</div>
+            <div class="lc"><span class="kw">import</span> tkinter <span class="kw">as</span> tk</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Importar la librería de interfaces gráficas</div>
+            <div class="ann-desc"><code>import</code> trae el módulo tkinter al proyecto. El alias <code>as tk</code> le pone un apodo corto para no escribir "tkinter" cada vez que lo uses.</div>
+            <div class="analogy">Es como contratar a un carpintero llamado "Tkinter González" pero decirle "llámame tk" para ahorrar tiempo en cada conversación.</div>
+          </div>
+        </div>
+
+        <!-- L2 -->
+        <div class="line-block">
+          <div class="line-top"><div class="ln">2</div><div class="lc"> </div></div>
+          <div class="ann"><div class="ann-desc">Línea en blanco — separa visualmente la importación de la definición de la función. Buena práctica de estilo.</div></div>
+        </div>
+
+        <!-- L3 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">3</div>
+            <div class="lc"><span class="kw">def</span> <span class="fn">parImpar</span>():</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Definir la función principal</div>
+            <div class="ann-desc"><code>def</code> crea un bloque de instrucciones con nombre. Esta función se ejecutará cada vez que el usuario haga clic en el botón. Por ahora solo se <em>define</em>, no se <em>ejecuta</em>.</div>
+            <div class="analogy">Como escribir una receta de cocina: la anotas en el cuaderno ahora, pero la cocinas solo cuando llegue el momento (cuando el usuario haga clic).</div>
+          </div>
+        </div>
+
+        <!-- L4 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">4</div>
+            <div class="lc">    number = name.<span class="fn">get</span>()</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Leer el campo de texto</div>
+            <div class="ann-desc"><code>.get()</code> extrae como texto (string) lo que el usuario escribió en la caja de entrada. Se guarda en la variable <code>number</code>.</div>
+            <div class="analogy">Es como abrir el buzón de correo y sacar la carta que alguien dejó adentro.</div>
+          </div>
+        </div>
+
+        <!-- L5 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">5</div>
+            <div class="lc">    <span class="kw">if</span> number != <span class="st">""</span>:</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Validar que el campo no esté vacío</div>
+            <div class="ann-desc"><code>!=</code> significa "es diferente de". Si el usuario dejó la caja en blanco (<code>""</code>), esta condición es falsa y salta al <code>else</code> de error.</div>
+            <div class="analogy">Como el portero de un club que solo deja pasar si traes entrada; si llegaste con las manos vacías, no entras.</div>
+          </div>
+        </div>
+
+        <!-- L6 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">6</div>
+            <div class="lc">       number = <span class="fn">int</span>(number)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Convertir texto → número entero</div>
+            <div class="ann-desc"><code>.get()</code> siempre devuelve texto (ej. <code>"42"</code>). <code>int()</code> lo convierte al número <code>42</code> para poder compararlo matemáticamente con &gt; y &lt;.</div>
+            <div class="analogy">Es como cambiar un billete de papel por monedas: mismo valor, pero ahora puedes contarlo y compararlo.</div>
+          </div>
+        </div>
+
+        <!-- L7 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">7</div>
+            <div class="lc">       <span class="kw">if</span>(number &gt; <span class="nm">0</span>):</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Primera condición: ¿es positivo?</div>
+            <div class="ann-desc">Si el número es mayor que cero entra en este bloque.</div>
+            <div class="analogy">Semáforo en verde: el saldo de tu cuenta es favorable, tienes dinero.</div>
+          </div>
+        </div>
+
+        <!-- L8 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">8</div>
+            <div class="lc">            result.<span class="fn">config</span>(text=<span class="st">"Es un numero positivo"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Actualizar la etiqueta resultado</div>
+            <div class="ann-desc"><code>.config(text=...)</code> cambia en tiempo real el texto visible del widget <code>result</code>, sin recrearlo.</div>
+            <div class="analogy">Como cambiar el letrero de una tienda mientras está abierta: los clientes ven el nuevo mensaje al instante.</div>
+          </div>
+        </div>
+
+        <!-- L9 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">9</div>
+            <div class="lc">       <span class="kw">elif</span> number &lt; <span class="nm">0</span>:</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Segunda condición: ¿es negativo?</div>
+            <div class="ann-desc"><code>elif</code> = "else if". Solo se evalúa si la condición anterior (<code>&gt;0</code>) fue falsa.</div>
+            <div class="analogy">Si no ganaste el primer premio de la rifa, revisas si ganaste el segundo.</div>
+          </div>
+        </div>
+
+        <!-- L10 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">10</div>
+            <div class="lc">            result.<span class="fn">config</span>(text=<span class="st">"Es un numero negativo"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Mostrar mensaje de negativo</div>
+            <div class="ann-desc">Actualiza la etiqueta con el texto apropiado para números negativos.</div>
+          </div>
+        </div>
+
+        <!-- L11 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">11</div>
+            <div class="lc">       <span class="kw">else</span>:</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Único caso restante: cero</div>
+            <div class="ann-desc">Si no fue positivo ni negativo, matemáticamente solo puede ser cero. El <code>else</code> captura ese caso sin necesidad de escribir <code>== 0</code>.</div>
+            <div class="analogy">Si no subiste ni bajaste de piso en el ascensor, sigues exactamente en la planta baja.</div>
+          </div>
+        </div>
+
+        <!-- L12 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">12</div>
+            <div class="lc">        result.<span class="fn">config</span>(text=<span class="st">"Es cero"</span>)</div>
+          </div>
+          <div class="ann"><div class="ann-desc">Muestra "Es cero" en la etiqueta de resultado.</div></div>
+        </div>
+
+        <!-- L13 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">13</div>
+            <div class="lc">    <span class="kw">else</span>:</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Campo vacío — rama de error</div>
+            <div class="ann-desc">Corresponde al <code>if number != ""</code> de la línea 5. Si el campo estaba vacío, llega aquí.</div>
+          </div>
+        </div>
+
+        <!-- L14 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">14</div>
+            <div class="lc">        result.<span class="fn">config</span>(text=<span class="st">"Error:Ingrese un valor"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Mensaje de error al usuario</div>
+            <div class="ann-desc">Informa que el campo estaba vacío para que el usuario sepa qué corregir.</div>
+            <div class="analogy">La máquina expendedora que dice "inserte moneda" antes de darte el producto.</div>
+          </div>
+        </div>
+
+        <!-- L15 -->
+        <div class="line-block">
+          <div class="line-top"><div class="ln">15</div><div class="lc"> </div></div>
+          <div class="ann"><div class="ann-desc">Línea en blanco — fin del bloque de la función, comienza la creación de la interfaz.</div></div>
+        </div>
+
+        <!-- L16 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">16</div>
+            <div class="lc">ventana = tk.<span class="fn">Tk</span>()</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Crear la ventana principal</div>
+            <div class="ann-desc"><code>Tk()</code> instancia el objeto ventana raíz. Es el contenedor de toda la aplicación.</div>
+            <div class="analogy">Levantar los cimientos de una casa: todo lo demás se construirá encima de esto.</div>
+          </div>
+        </div>
+
+        <!-- L17 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">17</div>
+            <div class="lc">ventana.<span class="fn">geometry</span>(<span class="st">"300x300"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Tamaño de la ventana en píxeles</div>
+            <div class="ann-desc">Define 300 px de ancho × 300 px de alto. El formato es <code>"anchoXalto"</code>.</div>
+            <div class="analogy">Elegir el tamaño del lienzo antes de empezar a pintar.</div>
+          </div>
+        </div>
+
+        <!-- L18 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">18</div>
+            <div class="lc">ventana.<span class="fn">title</span>(<span class="st">"App saludo personalizado"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Texto en la barra de título</div>
+            <div class="ann-desc">Aparece en la barra superior de la ventana del sistema operativo.</div>
+            <div class="analogy">El nombre en la placa de la puerta de una oficina.</div>
+          </div>
+        </div>
+
+        <!-- L19 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">19</div>
+            <div class="lc">frame = tk.<span class="fn">Frame</span>(ventana, bg=<span class="st">"yellow"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Crear un contenedor (Frame)</div>
+            <div class="ann-desc">Un Frame es una caja invisible con fondo amarillo que agrupa y organiza los widgets hijos. <code>bg</code> = background (color de fondo).</div>
+            <div class="analogy">Una bandeja de cocina: pones todos los ingredientes ordenados dentro antes de llevarlos a la mesa.</div>
+          </div>
+        </div>
+
+        <!-- L20 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">20</div>
+            <div class="lc">frame.<span class="fn">pack</span>(fill=<span class="st">"both"</span>, expand=<span class="st">"true"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Colocar y estirar el frame</div>
+            <div class="ann-desc"><code>pack()</code> posiciona el widget automáticamente. <code>fill="both"</code> lo estira en X e Y. <code>expand=True</code> lo hace ocupar todo el espacio sobrante de la ventana.</div>
+            <div class="analogy">Inflar un globo dentro de una caja: se expande hasta ocupar todo el espacio disponible.</div>
+          </div>
+        </div>
+
+        <!-- L21 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">21</div>
+            <div class="lc">label = tk.<span class="fn">Label</span>(frame, text=<span class="st">"Ingrese su nombre"</span>, bg=<span class="st">"yellow"</span>, font=(<span class="st">"arial"</span>,<span class="nm">15</span>,<span class="st">"bold"</span>)).<span class="fn">pack</span>()</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Etiqueta de instrucción (texto guía)</div>
+            <div class="ann-desc">Crea una etiqueta con texto en Arial 15 negrita y la coloca en pantalla con <code>.pack()</code> encadenado. <strong>Nota:</strong> al encadenar, <code>label</code> guarda <code>None</code> (el resultado de pack), no el widget.</div>
+            <div class="analogy">El cartel de "Tome un número" en un banco: le indica al usuario exactamente qué debe hacer.</div>
+          </div>
+        </div>
+
+        <!-- L22 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">22</div>
+            <div class="lc">name = tk.<span class="fn">Entry</span>(frame)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Campo de texto editable (Entry)</div>
+            <div class="ann-desc">Crea la caja donde el usuario escribe el número. Se guarda en <code>name</code> para poder leerla después con <code>name.get()</code>.</div>
+            <div class="analogy">El formulario en blanco esperando a que escribas tu nombre.</div>
+          </div>
+        </div>
+
+        <!-- L23 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">23</div>
+            <div class="lc">name.<span class="fn">pack</span>()</div>
+          </div>
+          <div class="ann"><div class="ann-desc">Coloca el campo de texto en pantalla con posición automática.</div></div>
+        </div>
+
+        <!-- L24 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">24</div>
+            <div class="lc">saludar = tk.<span class="fn">Button</span>(frame, text=<span class="st">"Saludar"</span>, command=parImpar)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Botón de acción</div>
+            <div class="ann-desc">Crea el botón con el texto "Saludar". <code>command=parImpar</code> vincula el evento clic con la función <code>parImpar()</code>. Nota: se pasa el nombre sin paréntesis (referencia, no llamada).</div>
+            <div class="analogy">El timbre de una puerta: cuando alguien lo presiona, dispara una acción específica (el mayordomo corre a abrir).</div>
+          </div>
+        </div>
+
+        <!-- L25 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">25</div>
+            <div class="lc">saludar.<span class="fn">pack</span>(pady=<span class="nm">4</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Colocar el botón con margen</div>
+            <div class="ann-desc"><code>pady=4</code> agrega 4 píxeles de espacio vertical (arriba y abajo) para que no quede pegado a los otros widgets.</div>
+          </div>
+        </div>
+
+        <!-- L26 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">26</div>
+            <div class="lc">result = tk.<span class="fn">Label</span>(frame, text=<span class="st">""</span>, bg=<span class="st">"yellow"</span>)</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">Etiqueta de resultado (inicialmente vacía)</div>
+            <div class="ann-desc">Crea la etiqueta que mostrará el resultado. Empieza con <code>text=""</code>. La función <code>parImpar()</code> la actualizará con <code>.config()</code> al hacer clic.</div>
+            <div class="analogy">Una pizarra en blanco lista para que el profesor escriba el resultado del examen.</div>
+          </div>
+        </div>
+
+        <!-- L27 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">27</div>
+            <div class="lc">result.<span class="fn">pack</span>()</div>
+          </div>
+          <div class="ann"><div class="ann-desc">Muestra la etiqueta de resultado en pantalla.</div></div>
+        </div>
+
+        <!-- L28 -->
+        <div class="line-block">
+          <div class="line-top">
+            <div class="ln">28</div>
+            <div class="lc">ventana.<span class="fn">mainloop</span>()</div>
+          </div>
+          <div class="ann">
+            <div class="ann-title">⚡ Bucle principal — el motor de la app</div>
+            <div class="ann-desc">Mantiene la ventana viva y escuchando eventos (clics, teclas, cierre). Sin esta línea, la ventana aparecería y desaparecería en milisegundos.</div>
+            <div class="analogy">El corazón que late sin parar: mientras late, la aplicación sigue viva y respondiendo.</div>
+          </div>
+        </div>
+
+      </div><!-- /lines -->
+    </div><!-- /code-wrap -->
+  </div><!-- /a1 -->
+
+  <!-- ═══════════════════ APP 2 ═══════════════════ -->
+  <div id="a2" class="panel">
+    <div class="sh">
+      <h2>App 2 · <em>Saludo Personalizado</em></h2>
+      <p>Lee el nombre del usuario y devuelve un saludo. Pasa el cursor sobre cada línea para ver la documentación.</p>
+    </div>
+
+    <div class="preview">
+      <div class="win">
+        <div class="wbar"><div class="wd r"></div><div class="wd y"></div><div class="wd g"></div><span class="wtitle">App saludo personalizado</span></div>
+        <div class="wbody">
+          <div class="wlbl">Ingrese su nombre</div>
+          <div class="wentry"></div>
+          <div class="wbtn">Saludar</div>
+          <div class="wres">hola Carlos como estas</div>
+        </div>
+      </div>
+      <div class="pinfo">
+        <h3>¿Qué hace esta app?</h3>
+        <p>El usuario escribe su nombre y la app responde con <em>"hola [nombre] como estas"</em>. Si el campo está vacío muestra un error.</p>
+        <span class="tag">tkinter</span><span class="tag">concatenación +</span><span class="tag">Entry.get()</span><span class="tag">Label.config()</span>
+      </div>
+    </div>
+
+    <div class="code-wrap">
+      <div class="code-hdr"><span>PYTHON · app2_saludo.py</span><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+      <div class="toggle-hint">💡 Pasa el cursor sobre cada línea para ver la explicación</div>
+      <div class="lines">
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">1</div><div class="lc"><span class="kw">import</span> tkinter <span class="kw">as</span> tk</div></div>
+          <div class="ann">
+            <div class="ann-title">Importar tkinter</div>
+            <div class="ann-desc">Igual que en App 1: trae la librería de interfaces gráficas con el alias corto <code>tk</code>.</div>
+            <div class="analogy">Abrir la caja de herramientas antes de empezar a construir.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">2</div><div class="lc"> </div></div>
+          <div class="ann"><div class="ann-desc">Línea en blanco para separar la importación de la función.</div></div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">3</div><div class="lc"><span class="kw">def</span> <span class="fn">saludar</span>():</div></div>
+          <div class="ann">
+            <div class="ann-title">Definir la función saludar</div>
+            <div class="ann-desc">Declara el bloque de código que se activará al hacer clic. Solo se ejecuta cuando el botón lo invoca.</div>
+            <div class="analogy">Escribir el guion de una obra de teatro: los actores lo leerán solo cuando salgan al escenario (cuando el usuario haga clic).</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">4</div><div class="lc">    name1 = name.<span class="fn">get</span>()</div></div>
+          <div class="ann">
+            <div class="ann-title">Capturar el texto escrito</div>
+            <div class="ann-desc">Lee el contenido actual del widget <code>name</code> (Entry) y lo guarda en <code>name1</code> como string.</div>
+            <div class="analogy">Como leer la etiqueta del nombre que el visitante lleva pegada en el pecho.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">5</div><div class="lc">    <span class="kw">if</span> name1 != <span class="st">""</span>:</div></div>
+          <div class="ann">
+            <div class="ann-title">Validar que el campo tenga contenido</div>
+            <div class="ann-desc">Solo procede si el usuario escribió algo. <code>!= ""</code> significa "no es cadena vacía".</div>
+            <div class="analogy">El médico no puede rellenar tu historial clínico si no le dices tu nombre.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">6</div><div class="lc">        result.<span class="fn">config</span>(text=<span class="st">"hola "</span>+name1+<span class="st">" como estas"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Construir y mostrar el saludo personalizado</div>
+            <div class="ann-desc">Une 3 cadenas con el operador <code>+</code>: texto fijo <code>"hola "</code> + el nombre del usuario + texto fijo <code>" como estas"</code>. El resultado se muestra en la etiqueta.</div>
+            <div class="analogy">Como un Mad Libs: tienes la oración "Hola ___ como estás" y solo cambias el espacio en blanco con el nombre real.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">7</div><div class="lc">    <span class="kw">else</span>:</div></div>
+          <div class="ann">
+            <div class="ann-title">Rama de campo vacío</div>
+            <div class="ann-desc">Si el usuario no escribió nada, la condición del <code>if</code> fue falsa y llega aquí.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">8</div><div class="lc">        result.<span class="fn">config</span>(text=<span class="st">"Error:Ingrese un valor"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Mostrar mensaje de error</div>
+            <div class="ann-desc">Informa al usuario que debe escribir algo antes de presionar el botón.</div>
+            <div class="analogy">El contestador automático que dice "deje su mensaje después del tono" cuando nadie respondió.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">9</div><div class="lc"> </div></div>
+          <div class="ann"><div class="ann-desc">Línea en blanco — fin de la función, inicio de la interfaz.</div></div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">10</div><div class="lc">ventana = tk.<span class="fn">Tk</span>()</div></div>
+          <div class="ann">
+            <div class="ann-title">Crear la ventana raíz</div>
+            <div class="ann-desc">Instancia el objeto principal de toda la aplicación gráfica.</div>
+            <div class="analogy">Construir el escenario vacío donde se montará toda la obra.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">11</div><div class="lc">ventana.<span class="fn">geometry</span>(<span class="st">"300x300"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Dimensiones de la ventana</div>
+            <div class="ann-desc">Fija el tamaño a 300×300 píxeles.</div>
+            <div class="analogy">Escoger el tamaño del marco antes de poner la foto adentro.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">12</div><div class="lc">ventana.<span class="fn">title</span>(<span class="st">"App saludo personalizado"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Título de la barra superior</div>
+            <div class="ann-desc">Texto que aparece en la barra de título del sistema operativo.</div>
+            <div class="analogy">El nombre en la placa de la puerta de un despacho.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">13</div><div class="lc">frame = tk.<span class="fn">Frame</span>(ventana, bg=<span class="st">"yellow"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Contenedor con fondo amarillo</div>
+            <div class="ann-desc">El Frame agrupa todos los widgets y define el color de fondo de la aplicación.</div>
+            <div class="analogy">La cartulina amarilla sobre la que pegarás todos los recortes de tu collage.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">14</div><div class="lc">frame.<span class="fn">pack</span>(fill=<span class="st">"both"</span>, expand=<span class="st">"true"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Estirar el frame para llenar la ventana</div>
+            <div class="ann-desc"><code>fill="both"</code> lo estira en horizontal y vertical. <code>expand=True</code> consume todo el espacio disponible.</div>
+            <div class="analogy">Estirar una sábana para que cubra toda la cama sin arrugas.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">15</div><div class="lc">label = tk.<span class="fn">Label</span>(frame, text=<span class="st">"Ingrese su nombre"</span>, bg=<span class="st">"yellow"</span>, font=(<span class="st">"arial"</span>,<span class="nm">15</span>,<span class="st">"bold"</span>)).<span class="fn">pack</span>()</div></div>
+          <div class="ann">
+            <div class="ann-title">Etiqueta de instrucción</div>
+            <div class="ann-desc">Texto guía en negrita que le dice al usuario qué debe escribir. El <code>.pack()</code> encadenado lo coloca de inmediato.</div>
+            <div class="analogy">El letrero "Empuje" o "Jale" en una puerta: dice exactamente qué hacer.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">16</div><div class="lc">name = tk.<span class="fn">Entry</span>(frame)</div></div>
+          <div class="ann">
+            <div class="ann-title">Campo de texto para el nombre</div>
+            <div class="ann-desc">Caja editable donde el usuario escribe su nombre. Se usa luego con <code>name.get()</code>.</div>
+            <div class="analogy">La línea en blanco de un formulario esperando ser llenada.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">17</div><div class="lc">name.<span class="fn">pack</span>()</div></div>
+          <div class="ann"><div class="ann-desc">Posiciona el campo de texto en la interfaz.</div></div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">18</div><div class="lc">saludar = tk.<span class="fn">Button</span>(frame, text=<span class="st">"Saludar"</span>, command=saludar)</div></div>
+          <div class="ann">
+            <div class="ann-title">Botón que activa la función</div>
+            <div class="ann-desc"><code>command=saludar</code> vincula el clic con la función <code>saludar()</code>. Se pasa sin paréntesis (referencia).</div>
+            <div class="analogy">El botón "Enviar" de un chat: lo presionas y tu mensaje sale al instante.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">19</div><div class="lc">saludar.<span class="fn">pack</span>(pady=<span class="nm">4</span>)</div></div>
+          <div class="ann"><div class="ann-desc">Coloca el botón con 4 px de margen vertical arriba y abajo.</div></div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">20</div><div class="lc">result = tk.<span class="fn">Label</span>(frame, text=<span class="st">""</span>, bg=<span class="st">"yellow"</span>)</div></div>
+          <div class="ann">
+            <div class="ann-title">Etiqueta de resultado vacía</div>
+            <div class="ann-desc">Empieza en blanco. Cada vez que el usuario presione el botón, <code>.config()</code> la actualizará con el saludo o el error.</div>
+            <div class="analogy">La pantalla de un marcador deportivo que empieza en 0 y cambia con cada punto.</div>
+          </div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">21</div><div class="lc">result.<span class="fn">pack</span>()</div></div>
+          <div class="ann"><div class="ann-desc">Muestra la etiqueta de resultado en pantalla.</div></div>
+        </div>
+
+        <div class="line-block">
+          <div class="line-top"><div class="ln">22</div><div class="lc">ventana.<span class="fn">mainloop</span>()</div></div>
+          <div class="ann">
+            <div class="ann-title">⚡ Bucle principal de eventos</div>
+            <div class="ann-desc">Mantiene la app activa indefinidamente, escuchando clics y eventos del teclado. Sin él, la ventana se cerraría en milisegundos.</div>
+            <div class="analogy">El mozo que espera de pie toda la noche, listo para atenderte cuando lo necesites.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /a2 -->
+
+  <!-- ═══════════════════ DIFF ═══════════════════ -->
+  <div id="df" class="panel">
+    <div class="sh"><h2>Comparación <em>lado a lado</em></h2><p>Ambas apps son casi idénticas en estructura. Solo cambia la lógica interna de la función.</p></div>
+
+    <table class="dtbl">
+      <thead><tr><th>Aspecto</th><th>App 1 · Número</th><th>App 2 · Saludo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Nombre de función</strong></td><td><span class="pill-y">parImpar()</span></td><td><span class="pill-g">saludar()</span></td></tr>
+        <tr><td><strong>Variable de entrada</strong></td><td><code>number = name.get()</code></td><td><code>name1 = name.get()</code></td></tr>
+        <tr><td><strong>Conversión de tipo</strong></td><td>✅ Sí — <code>int(number)</code> para comparar matemáticamente</td><td>❌ No — trabaja con el string directamente</td></tr>
+        <tr><td><strong>Condiciones</strong></td><td><code>if &gt;0 / elif &lt;0 / else</code> — 3 ramas</td><td><code>if != "" / else</code> — 2 ramas</td></tr>
+        <tr><td><strong>Operación principal</strong></td><td>Comparación numérica (&gt;, &lt;)</td><td>Concatenación de texto (+)</td></tr>
+        <tr><td><strong>Riesgo de error</strong></td><td>⚠️ <code>ValueError</code> si se escribe texto en vez de número</td><td>✅ Cualquier texto es válido, no hay error</td></tr>
+        <tr><td><strong>Ventana, Frame, Entry, Button, mainloop</strong></td><td colspan="2" style="text-align:center;color:var(--muted)">⬛ Idénticos en ambas aplicaciones</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sh" style="margin-top:8px"><h2>Flujo de <em>ejecución</em></h2><p>Desde que la app arranca hasta que el usuario ve el resultado.</p></div>
+    <div class="flow">
+      <div class="fstep"><div class="ftitle" style="color:var(--acc1)">① INICIO</div><p>Se ejecuta el script. Se crea la ventana y mainloop() empieza a escuchar.</p></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="ftitle" style="color:var(--acc2)">② USUARIO</div><p>Escribe en el Entry y hace clic en el Button.</p></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="ftitle" style="color:var(--green)">③ FUNCIÓN</div><p>command= llama a la función. Lee con .get() y evalúa condiciones.</p></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="ftitle" style="color:var(--acc3)">④ RESULTADO</div><p>result.config(text=...) actualiza la etiqueta con el mensaje correcto.</p></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CONCEPTS ═══════════════════ -->
+  <div id="kc" class="panel">
+    <div class="sh"><h2>Conceptos <em>Clave</em></h2><p>Los bloques de construcción detrás de ambas apps, con analogías del mundo real.</p></div>
+    <div class="grid">
+      <div class="ccard"><div class="ico"></div><h4>import … as tk</h4><p>Importar trae herramientas prefabricadas. El alias <code>as tk</code> le pone un apodo corto para no repetir el nombre completo.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>def función():</h4><p>Define instrucciones con nombre. Solo se ejecutan cuando alguien las llama. Es como escribir una receta: la anotas ahora, la usas después.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>int(valor)</h4><p>Convierte texto a número entero. <code>"42"</code> → <code>42</code>. Sin esto no puedes hacer comparaciones matemáticas.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>if / elif / else</h4><p>Bifurcaciones: el programa toma solo un camino. Como un árbol de decisiones.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>tk.Tk() + mainloop()</h4><p><code>Tk()</code> construye la ventana. <code>mainloop()</code> la mantiene viva. Sin mainloop, se cerraría en milisegundos.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>tk.Frame()</h4><p>Contenedor que agrupa widgets. Como una bandeja que lleva varios objetos juntos y organizados.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>tk.Entry() + .get()</h4><p>Campo de texto editable. <code>.get()</code> lee su contenido cuando lo necesitas.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>Button
+        (command=fn)</h4><p><code>command</code> apunta a la función que se ejecuta al presionar. El timbre que activa al mayordomo.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>Label + .config()</h4><p>Etiqueta de texto. <code>.config(text=...)</code> la actualiza en tiempo real sin recrearla.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>.pack(fill, expand, pady)</h4><p>Gestor de geometría automático. <code>fill="both"</code> estira en X e Y. <code>pady</code> agrega margen vertical.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>Concatenación (+)</h4><p><code>"hola " + nombre + " como estas"</code> une cadenas. Como pegar pedazos de papel para formar una oración.</p></div>
+      <div class="ccard"><div class="ico"></div><h4>Validación != ""</h4><p>Verificar que el campo no esté vacío antes de procesar. Como revisar que el vaso tenga agua antes de beberlo.</p></div>
+    </div>
+  </div>
+
+</div><!-- /tabs-outer -->
+
+<footer>Documentado con analogías del mundo real · Python <code>tkinter</code> · GUI de escritorio</footer>
+
+<script>
+  function tab(id, btn) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('on'));
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('on'));
+    document.getElementById(id).classList.add('on');
+    btn.classList.add('on');
+  }
+</script>
+</body>
+</html>
