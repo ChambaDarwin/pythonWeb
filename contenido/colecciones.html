@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colecciones en Python</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style/style_colecciones.css">
+<link rel="icon" type="image/x-icon" href="../image/python.png">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">🐍 Python · Estructuras de datos</div>
+  <h1>Colecciones<br>en <em>Python</em></h1>
+  <p class="hero-sub">Aprende a almacenar, organizar y manipular datos con listas y tuplas.</p>
+  <div class="hero-pills">
+    <a href="#listas" class="pill pill-list">📋 Listas</a>
+    <a href="#tuplas" class="pill pill-tuple">📦 Tuplas</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- COMPARACIÓN RÁPIDA -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <h2 class="section-title">Diferencias clave</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card list-card">
+        <h4>📋 Lista</h4>
+        <ul>
+          <li>Se crea con corchetes <code>[ ]</code></li>
+          <li>Es <strong>mutable</strong> — puedes cambiarla</li>
+          <li>Permite agregar, eliminar y modificar</li>
+          <li>Ideal para datos que cambian</li>
+        </ul>
+      </div>
+      <div class="compare-card tuple-card">
+        <h4>📦 Tupla</h4>
+        <ul>
+          <li>Se crea con paréntesis <code>( )</code></li>
+          <li>Es <strong>inmutable</strong> — no se puede cambiar</li>
+          <li>Solo permite leer sus elementos</li>
+          <li>Ideal para datos fijos y constantes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- LISTAS -->
+  <section class="section" id="listas">
+    <div class="section-header">
+      <div class="section-icon icon-list">📋</div>
+      <h2 class="section-title">Listas</h2>
+    </div>
+
+    <!-- Crear -->
+    <div class="concept">
+      <span class="concept-label label-list">Fundamento</span>
+      <h3>¿Qué es una lista?</h3>
+      <p>Una lista es una colección <strong>ordenada y mutable</strong> de elementos. Puede contener datos de distinto tipo: números, texto, booleanos, incluso otras listas.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code><span class="cm"># Dos formas de crear una lista vacía</span>
+lista = []
+lista = <span class="cf">list</span>()
+
+<span class="cm"># Lista con elementos</span>
+frutas = [<span class="cs">"manzana"</span>, <span class="cs">"pera"</span>, <span class="cs">"uva"</span>]
+numeros = [<span class="cn">1</span>, <span class="cn">2</span>, <span class="cn">3</span>, <span class="cn">4</span>, <span class="cn">5</span>]</code></pre>
+      </div>
+    </div>
+
+    <!-- Agregar -->
+    <div class="concept">
+      <span class="concept-label label-method">Método</span>
+      <h3>Agregar elementos — <code>append()</code></h3>
+      <p>El método <code>append()</code> agrega un elemento al <strong>final</strong> de la lista. Se usa cuando no te importa la posición.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = []
+lista.<span class="cf">append</span>(<span class="cn">2</span>)
+lista.<span class="cf">append</span>(<span class="cn">6</span>)
+lista.<span class="cf">append</span>(<span class="cn">7</span>)
+<span class="cf">print</span>(lista)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado</div>[2, 6, 7]</div>
+    </div>
+
+    <!-- Llenar con for -->
+    <div class="concept">
+      <span class="concept-label label-method">Técnica</span>
+      <h3>Llenar con bucle <code>for</code></h3>
+      <p>Combinar <code>for</code> + <code>range()</code> + <code>input()</code> permite pedirle al usuario que llene la lista con sus propios valores.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = []
+<span class="ck">for</span> i <span class="ck">in</span> <span class="cf">range</span>(<span class="cn">3</span>):
+    n = <span class="cf">int</span>(<span class="cf">input</span>(<span class="cs">f"Ingresa un número en la posición {i+1}: "</span>))
+    lista.<span class="cf">append</span>(n)
+<span class="cf">print</span>(lista)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado (ejemplo)</div>[2, 4, 5]</div>
+    </div>
+
+    <!-- Insert -->
+    <div class="concept">
+      <span class="concept-label label-method">Método</span>
+      <h3>Insertar en posición — <code>insert()</code></h3>
+      <p><code>insert(posición, valor)</code> agrega un elemento en una posición específica. Los demás elementos se desplazan a la derecha.</p>
+      <div class="note">
+        <span class="note-icon">💡</span>
+        <span>Los índices empiezan en <strong>0</strong>. El primer elemento es el índice 0, el segundo es el índice 1, y así sucesivamente.</span>
+      </div>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = [<span class="cn">3</span>, <span class="cn">4</span>, <span class="cn">5</span>]
+lista.<span class="cf">insert</span>(<span class="cn">1</span>, <span class="cn">200</span>)  <span class="cm"># inserta 200 en el índice 1</span>
+<span class="cf">print</span>(lista)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado</div>[3, 200, 4, 5]</div>
+    </div>
+
+    <!-- Actualizar -->
+    <div class="concept">
+      <span class="concept-label label-method">Actualizar</span>
+      <h3>Modificar un elemento</h3>
+      <p>Para cambiar un valor, accede a él por su índice y asígnale el nuevo valor con <code>=</code>.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = [<span class="cn">3</span>, <span class="cn">4</span>, <span class="cn">5</span>]
+lista[<span class="cn">0</span>] = <span class="cn">500</span>  <span class="cm"># cambia el primer elemento</span>
+<span class="cf">print</span>(lista)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado</div>[500, 4, 5]</div>
+    </div>
+
+    <!-- Eliminar -->
+    <div class="concept">
+      <span class="concept-label label-method">Eliminar</span>
+      <h3>Eliminar por valor — <code>remove()</code></h3>
+      <p><code>remove(valor)</code> busca y elimina la <strong>primera aparición</strong> del valor indicado.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = [<span class="cn">3</span>, <span class="cn">4</span>, <span class="cn">5</span>, <span class="cn">4</span>, <span class="cn">4</span>]
+lista.<span class="cf">remove</span>(<span class="cn">4</span>)  <span class="cm"># elimina solo el primer 4</span>
+<span class="cf">print</span>(lista)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado</div>[3, 5, 4, 4]</div>
+    </div>
+
+    <!-- Pop -->
+    <div class="concept">
+      <span class="concept-label label-method">Eliminar</span>
+      <h3>Eliminar por posición — <code>pop()</code></h3>
+      <p><code>pop()</code> elimina y <strong>devuelve</strong> el elemento en la posición indicada. Sin argumento, elimina el último.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = [<span class="cn">3</span>, <span class="cn">4</span>, <span class="cn">5</span>, <span class="cn">4</span>, <span class="cn">4</span>]
+
+lista.<span class="cf">pop</span>()       <span class="cm"># sin argumento → elimina el último</span>
+<span class="cf">print</span>(lista)    <span class="cm"># [3, 4, 5, 4]</span>
+
+lista.<span class="cf">pop</span>(<span class="cn">1</span>)     <span class="cm"># con índice → elimina el elemento en pos 1</span>
+<span class="cf">print</span>(lista)    <span class="cm"># [3, 5, 4]</span></code></pre>
+      </div>
+    </div>
+
+    <!-- Métodos de lista -->
+    <div class="section-header" style="margin-top:32px;">
+      <h3 style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;">Resumen de métodos</h3>
+    </div>
+    <div class="methods-grid">
+      <div class="method-card"><div class="method-name">append(x)</div><div class="method-desc">Agrega x al final de la lista</div></div>
+      <div class="method-card"><div class="method-name">insert(i, x)</div><div class="method-desc">Inserta x en la posición i</div></div>
+      <div class="method-card"><div class="method-name">remove(x)</div><div class="method-desc">Elimina la primera aparición de x</div></div>
+      <div class="method-card"><div class="method-name">pop(i)</div><div class="method-desc">Elimina y devuelve el elemento en i</div></div>
+      <div class="method-card"><div class="method-name">len(lista)</div><div class="method-desc">Devuelve la cantidad de elementos</div></div>
+      <div class="method-card"><div class="method-name">sort()</div><div class="method-desc">Ordena la lista de menor a mayor</div></div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- TUPLAS -->
+  <section class="section" id="tuplas">
+    <div class="section-header">
+      <div class="section-icon icon-tuple">📦</div>
+      <h2 class="section-title">Tuplas</h2>
+    </div>
+
+    <div class="concept">
+      <span class="concept-label label-tuple">Fundamento</span>
+      <h3>¿Qué es una tupla?</h3>
+      <p>Una tupla es una colección <strong>ordenada e inmutable</strong>. Una vez creada, sus elementos no pueden cambiar. Se usa para datos que no deben modificarse, como coordenadas, fechas o configuraciones.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>tupla = (<span class="cn">4</span>, <span class="cn">5</span>, <span class="cn">6</span>)
+<span class="cf">print</span>(tupla)      <span class="cm"># (4, 5, 6)</span>
+<span class="cf">print</span>(tupla[<span class="cn">2</span>])   <span class="cm"># 6  → accede por índice</span></code></pre>
+      </div>
+    </div>
+
+    <!-- Recorrer -->
+    <div class="concept">
+      <span class="concept-label label-method">Técnica</span>
+      <h3>Recorrer una tupla con <code>for</code></h3>
+      <p>Igual que las listas, puedes iterar sobre una tupla con un bucle <code>for</code>.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>tupla = (<span class="cn">4</span>, <span class="cn">5</span>, <span class="cn">6</span>)
+<span class="ck">for</span> i <span class="ck">in</span> tupla:
+    <span class="cf">print</span>(i)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado</div>4<br>5<br>6</div>
+    </div>
+
+    <!-- Desempaquetar -->
+    <div class="concept">
+      <span class="concept-label label-tuple">Avanzado</span>
+      <h3>Desempaquetar tuplas</h3>
+      <p>Puedes asignar cada elemento de una tupla a una variable diferente en una sola línea. Es muy útil cuando una función devuelve múltiples valores.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code><span class="ck">def</span> <span class="cf">operacion</span>(a, b):
+    suma           = a + b
+    resta          = a - b
+    multiplicacion = a * b
+    <span class="ck">return</span> suma, resta, multiplicacion   <span class="cm"># devuelve tupla</span>
+
+<span class="cm"># Desempaquetamos los 3 valores en 3 variables</span>
+suma, resta, multi = <span class="cf">operacion</span>(<span class="cn">7</span>, <span class="cn">3</span>)
+<span class="cf">print</span>(<span class="cs">f"Suma: {suma}, Resta: {resta}, Multi: {multi}"</span>)</code></pre>
+      </div>
+      <div class="output"><div class="output-label">Resultado</div>Suma: 10, Resta: 4, Multi: 21</div>
+    </div>
+
+    <!-- Métodos tuplas -->
+    <div class="concept">
+      <span class="concept-label label-tuple">Métodos</span>
+      <h3>Métodos disponibles</h3>
+      <p>Las tuplas tienen solo dos métodos nativos porque son inmutables.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>tupla = (<span class="cn">1</span>, <span class="cn">2</span>, <span class="cn">2</span>, <span class="cn">3</span>, <span class="cn">2</span>)
+<span class="cf">print</span>(tupla.<span class="cf">count</span>(<span class="cn">2</span>))   <span class="cm"># 3  → cuántas veces aparece el 2</span>
+
+tupla2 = (<span class="cn">5</span>, <span class="cn">6</span>, <span class="cn">7</span>, <span class="cn">8</span>, <span class="cn">3</span>)
+<span class="cf">print</span>(tupla2.<span class="cf">index</span>(<span class="cn">8</span>))  <span class="cm"># 3  → posición del 8</span></code></pre>
+      </div>
+    </div>
+
+    <!-- Convertir -->
+    <div class="concept">
+      <span class="concept-label label-method">Conversión</span>
+      <h3>Convertir entre lista y tupla</h3>
+      <p>Usa <code>tuple()</code> para convertir una lista en tupla, y <code>list()</code> para convertir una tupla en lista.</p>
+      <div class="code-wrap">
+        <div class="code-header">
+          <div class="code-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+          <span class="code-lang">python</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>lista = [<span class="cn">2</span>, <span class="cn">3</span>, <span class="cn">5</span>, <span class="cn">6</span>]
+
+<span class="cm"># Lista → Tupla</span>
+tupla = <span class="cf">tuple</span>(lista)
+<span class="cf">print</span>(tupla)    <span class="cm"># (2, 3, 5, 6)</span>
+
+<span class="cm"># Tupla → Lista</span>
+lista2 = <span class="cf">list</span>(tupla)
+<span class="cf">print</span>(lista2)   <span class="cm"># [2, 3, 5, 6]</span></code></pre>
+      </div>
+    </div>
+
+    <!-- Métodos de tupla -->
+    <div class="section-header" style="margin-top:32px;">
+      <h3 style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;">Métodos de tupla</h3>
+    </div>
+    <div class="methods-grid">
+      <div class="method-card"><div class="method-name tuple-method">count(x)</div><div class="method-desc">Cuenta cuántas veces aparece x</div></div>
+      <div class="method-card"><div class="method-name tuple-method">index(x)</div><div class="method-desc">Devuelve la posición de x</div></div>
+      <div class="method-card"><div class="method-name tuple-method">len(tupla)</div><div class="method-desc">Devuelve la cantidad de elementos</div></div>
+      <div class="method-card"><div class="method-name tuple-method">tuple(lista)</div><div class="method-desc">Convierte una lista en tupla</div></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>🐍 Colecciones en Python · Listas y Tuplas</p>
+</footer>
+
+<script>
+  function copyCode(btn) {
+    const pre = btn.closest('.code-wrap').querySelector('pre');
+    const text = pre.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copiar';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.animation = 'fadeUp 0.5s ease both';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.concept, .method-card, .compare-card').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
